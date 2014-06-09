@@ -1,0 +1,12 @@
+<OgreSystem RenderFramesSeparately="0" RenderInSameThread="0" MillisecondsBetweenFrames="100" ShowConfiguration="0">
+	<SystemBase ReadMsgAmount="100" SystemPriority="2" />
+	<Camera>
+		<LookAt x="100" y="0" z="100"/>
+		<Position x="200" y="100" z="200"/>
+	</Camera>
+	<Entity>
+		<Components>
+			<ScriptComponent FileName="Controls.py" Class="OgreSystem"/>
+		</Components>
+	</Entity>
+</OgreSystem>

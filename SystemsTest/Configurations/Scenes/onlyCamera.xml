@@ -1,0 +1,21 @@
+<Scene>
+	<Entity>
+		<Components>
+			<CameraComponent>
+				<Name>PlayerCam</Name>
+				<Position x="200" y="100" z="200" />
+				<LookAt x="20" y="2" z="0" />
+				<NearClipDistance>5</NearClipDistance>
+			</CameraComponent>
+			<EntityWorldComponent>
+				<Position x="300" y="200" z="200" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<PhysicsComponent>
+				<Envelope x="1.00" y="1.00" z="1.00"/>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+		</Components>
+	</Entity>
+</Scene>

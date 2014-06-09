@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<Scene>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x="0" y="0" z="0"/>
+				<Position x="56" y="2613" z="178"/>
+				<Scale x="1" y="1" z="1"/>
+			</EntityWorldComponent>
+			<PhysicsComponent Mass="10"/>
+			<RenderComponent Mesh="fish.mesh" Name="fish.mesh0"/>
+			<ScriptComponent FileName="Controls.py"/>
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x="0" y="0" z="0"/>
+				<Position x="561" y="613" z="17"/>
+				<Scale x="1" y="1" z="1"/>
+			</EntityWorldComponent>
+			<PhysicsComponent Mass="10"/>
+			<RenderComponent Mesh="fish.mesh" Name="fish.mesh1"/>
+			<ScriptComponent FileName="Controls.py"/>
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x="0" y="0" z="0"/>
+				<Position x="200" y="100" z="200"/>
+				<Scale x="1" y="1" z="1"/>
+			</EntityWorldComponent>
+			<CameraComponent FarClipDistance="0" Name="PlayerCam" NearClipDistance="5">
+				<LookAt x="100" y="0" z="100"/>
+				<Position x="200" y="100" z="200"/>
+			</CameraComponent>
+		</Components>
+	</Entity>
+</Scene>

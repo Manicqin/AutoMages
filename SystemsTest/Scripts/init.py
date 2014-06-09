@@ -1,0 +1,157 @@
+import SystemsExports;
+import MessagesExports;
+import ComponentsExports;
+
+from xml.etree import ElementTree
+import pickle;
+import sys;
+
+sys.stdout = SystemsExports.logWraper
+print "Logger Set!"
+#from wx._misc import Sleep
+
+def printSystemId(x):
+    SystemsExports.LogFunc(x + " " + str(SystemsExports.getSystemIdByName(x)));
+
+def linkSystems(recvSystemId,sendSystemId):
+    SystemsExports.setSystemChannelOut(sendSystemId,SystemsExports.getSystemChannelIn(recvSystemId));
+
+def createChanneledMsg(msg,chann):
+    return MessagesExports.ChanneledMessages.createChanneledMsg(chann,msg.createSharedPtr());
+
+class sender():
+    mSender = 0;
+    def __init__(self,sender):
+        mSender = sender;
+    def reciever(self,reciever):
+        SystemsExports.setSystemChannelOut(mSender,SystemsExports.getSystemChannelIn(reciever));
+
+class linkOutChannel():
+    mSender = 0;
+    def __init__(self,sender):
+        self.mSender = sender;
+    def to(self,reciever):
+        SystemsExports.setSystemChannelOut(self.mSender,SystemsExports.getSystemChannelIn(reciever));
+
+def waitOnChannel(channel):
+    flag = True
+    while flag:
+        time.sleep(1)
+        print "waiting on " + channel.channelName + " " + str(channel.numOfInstances)
+        if (channel.numOfInstances <= 2):
+            flag = False
+
+SystemsExports.LogFunc("start")
+printSystemId("LoggingSystem");
+printSystemId("OgreSystem");
+printSystemId("ScriptSystem");
+printSystemId("PhysicsSystem");
+printSystemId("ComponentsSystem");
+printSystemId("ControllerSystem");
+printSystemId("GuiSystem");
+
+physSysId   = SystemsExports.getSystemIdByName("PhysicsSystem");
+ogreSysId   = SystemsExports.getSystemIdByName("OgreSystem");
+cntrlSysId  = SystemsExports.getSystemIdByName("ControllerSystem");
+cmpntSysId  = SystemsExports.getSystemIdByName("ComponentsSystem")
+entitySysId = SystemsExports.getSystemIdByName("EntitySystem")
+GuiSysId    = SystemsExports.getSystemIdByName("GuiSystem")
+
+configObj = SystemsExports.getConfiguration()
+configurationsPath = configObj.get("GlobalConfigurations").get("ConfigurationPath") +"/"
+scriptsPath = configObj.get("GlobalConfigurations").get("ScriptsPath") +"/"
+
+print ("path",configurationsPath , scriptsPath)
+SystemsExports.LogFunc("Assigning Channels to Systems")
+# if(ogreSysId and physSysId):
+#     linkOutChannel(physSysId).to(ogreSysId);
+#     linkOutChannel(ogreSysId).to(physSysId);
+# if(ogreSysId and cntrlSysId):
+#     linkOutChannel(cntrlSysId).to(ogreSysId);
+
+SystemsExports.LogFunc( "Creating channel")
+#print "Creating channel"
+channel2 = SystemsExports.createChannelHandler("initChannel");
+
+SystemsExports.LogFunc("Initializing Physics Systems & ComponentSystem")
+#print "Initializing Physics Systems & ComponentSystem"
+#initMsg = MessagesExports.InitSystemMsg.createFromFile("Configurations/ComponentsInit/physicsInit.xml");
+#cmInit = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,initMsg.createSharedPtr());
+if(physSysId):
+    SystemsExports.getSystemChannelIn(physSysId).addMsg(createChanneledMsg(MessagesExports.InitSystemMsg.createFromFile("ComponentsInit/physicsInit.xml",configurationsPath),channel2));
+
+if(cmpntSysId):
+    initMsg = MessagesExports.InitSystemMsg.createFromFile("ComponentsInit/ComponentInit.xml",configurationsPath);
+    cmInit = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,initMsg.createSharedPtr());
+    SystemsExports.getSystemChannelIn(cmpntSysId).addMsg(cmInit);
+
+#This is the waitOnChannel for the "Intializing Physics Systems & ComponentSystem" Doing some shit in the meanwhile
+
+    SystemsExports.waitOnChannel(channel2,1000,0,3);
+
+
+if(cntrlSysId):
+    initMsg = MessagesExports.InitSystemMsg.createFromFile("ComponentsInit/ControlInit.xml",configurationsPath);
+    cmInit = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,initMsg.createSharedPtr());
+    SystemsExports.getSystemChannelIn(cntrlSysId).addMsg(cmInit);
+    SystemsExports.waitOnChannel(channel2,1000,0,3);
+
+ptreeEntitiesData = ElementTree.ElementTree();
+ptreeEntitiesData.parse(configurationsPath + "Scenes/test.xml");
+
+if(ogreSysId):
+
+
+    ptreeOgreInitData = ElementTree.ElementTree();
+    ptreeOgreInitData.parse(configurationsPath+"ComponentsInit/OgreInit.xml");
+
+    #Building Meshes
+    meshElm = ElementTree.Element("Meshes");
+    meshElm.extend(ptreeEntitiesData.findall(".//RenderComponent"))
+    ptreeOgreInitData.getroot().append(meshElm);
+
+    #ElementTree.dump(ptreeOgreInitData)
+    SystemsExports.LogFunc("Intializing OgreSystem");
+#    print "Intializing OgreSystem"
+    initMsg = MessagesExports.InitSystemMsg.createFromData(ElementTree.tostring(ptreeOgreInitData.getroot()))
+    cmInit = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,initMsg.createSharedPtr());
+    SystemsExports.getSystemChannelIn(ogreSysId).addMsg(cmInit);
+
+    SystemsExports.waitOnChannel(channel2,1000,0,3);
+
+    SystemsExports.LogFunc("Starting OgreSystem");
+ #   print "Starting OgreSystem"
+    startMsg = MessagesExports.StartSystemMsg();
+    cmStart = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,startMsg.createSharedPtr());
+    SystemsExports.getSystemChannelIn(ogreSysId).addMsg(cmStart);
+    #print "fgdgbefore " + str(channel2.numOfInstances)
+    SystemsExports.waitOnChannel(channel2,1000,0,3);
+    #print "asdasdafter " + str(channel2.numOfInstances)
+
+if(cmpntSysId):
+    SystemsExports.LogFunc("Intializing EntitySystem");
+    #print "Intializing EntitySystem"
+
+    initMsg = MessagesExports.CreateSceneMsg.createFromData(ElementTree.tostring(ptreeEntitiesData.getroot()))
+    cmInit = MessagesExports.ChanneledMessages.createChanneledMsg(channel2,initMsg.createSharedPtr());
+    SystemsExports.getSystemChannelIn(cmpntSysId).addMsg(cmInit);
+   # print "BEFORE " + str(channel2.numOfInstances)
+    SystemsExports.waitOnChannel(channel2,1000,0,3);
+    #print "after " + str(channel2.numOfInstances)
+
+startMsg = MessagesExports.StartSystemMsg()
+if(physSysId):
+    SystemsExports.LogFunc("Starting Physics");
+    #print "Starting Physics"
+    SystemsExports.getSystemChannelIn(physSysId).addMsg(startMsg.createSharedPtr());
+
+if(cntrlSysId):
+    SystemsExports.LogFunc("Starting Controller");
+    #print "Starting Controller"
+    SystemsExports.getSystemChannelIn(cntrlSysId).addMsg(startMsg.createSharedPtr());
+
+if(GuiSysId):
+    SystemsExports.LogFunc("Starting gUI");
+    #print "Starting Controller"
+    SystemsExports.getSystemChannelIn(GuiSysId).addMsg(startMsg.createSharedPtr());
+SystemsExports.LogFunc("init Finished")

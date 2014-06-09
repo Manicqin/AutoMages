@@ -1,0 +1,5 @@
+<OgreSystem RenderFramesSeparately="0" RenderInSameThread="0" MillisecondsBetweenFrames="100" ShowConfiguration="0">
+	<SystemBase ReadMsgAmount="100" SystemPriority="2">
+		<ScriptComponent FileName="Controls.py" />
+	</SystemBase>
+</OgreSystem>

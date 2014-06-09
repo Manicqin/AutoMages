@@ -1,0 +1,1146 @@
+24470::: ScriptSystem::initSystem path nitialise: /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts
+35865::: Logger Set!
+35892::: 
+
+35914::: start
+35945::: LoggingSystem 1
+35960::: OgreSystem 11
+35972::: ScriptSystem 21
+35984::: PhysicsSystem 31
+35995::: ComponentsSystem 41
+36006::: ControllerSystem 51
+36017::: GuiSystem 0
+36115::: ('path', '/home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Configurations/', '/home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/')
+36127::: 
+
+36136::: Assigning Channels to Systems
+36144::: Creating channel
+36164::: Initializing Physics Systems & ComponentSystem
+1204532::: Creating components for 6
+2039019::: Intializing OgreSystem
+2205966::: Creating components for 2
+3039640::: Starting OgreSystem
+3107103::: OgreSystem::startSystem
+3107244::: OgreLog Creating resource group General
+3107264::: OgreLog Creating resource group Internal
+3107271::: OgreLog Creating resource group Autodetect
+3107379::: OgreLog SceneManagerFactory for type 'DefaultSceneManager' registered.
+3107593::: OgreLog Registering ResourceManager for type Material
+3107607::: OgreLog Registering ResourceManager for type Mesh
+3107620::: OgreLog Registering ResourceManager for type Skeleton
+3107661::: OgreLog MovableObjectFactory for type 'ParticleSystem' registered.
+3107690::: OgreLog OverlayElementFactory for type Panel registered.
+3107697::: OgreLog OverlayElementFactory for type BorderPanel registered.
+3107704::: OgreLog OverlayElementFactory for type TextArea registered.
+3107716::: OgreLog Registering ResourceManager for type Font
+3107744::: OgreLog ArchiveFactory for archive type FileSystem registered.
+3107754::: OgreLog ArchiveFactory for archive type Zip registered.
+3107762::: OgreLog ArchiveFactory for archive type EmbeddedZip registered.
+3107769::: OgreLog DDS codec registering
+3107796::: OgreLog FreeImage version: 3.15.4
+3107804::: OgreLog This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+3108000::: OgreLog Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,3fr,arw,bay,bmq,cap,cine,cr2,crw,cs1,dc2,dcr,drf,dsc,dng,erf,fff,ia,iiq,k25,kc2,kdc,mdc,mef,mos,mrw,nef,nrw,orf,pef,ptx,pxn,qtk,raf,raw,rdc,rw2,rwl,rwz,sr2,srf,srw,sti
+3108012::: OgreLog Registering ResourceManager for type HighLevelGpuProgram
+3108032::: OgreLog Registering ResourceManager for type Compositor
+3108262::: OgreLog MovableObjectFactory for type 'Entity' registered.
+3108274::: OgreLog MovableObjectFactory for type 'Light' registered.
+3108284::: OgreLog MovableObjectFactory for type 'BillboardSet' registered.
+3108293::: OgreLog MovableObjectFactory for type 'ManualObject' registered.
+3108303::: OgreLog MovableObjectFactory for type 'BillboardChain' registered.
+3108316::: OgreLog MovableObjectFactory for type 'RibbonTrail' registered.
+3108442::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/RenderSystem_GL
+3110972::: OgreLog Installing plugin: GL RenderSystem
+3110998::: OgreLog OpenGL Rendering Subsystem created.
+3298374::: OgreLog Plugin successfully installed
+3298404::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/Plugin_ParticleFX
+3299599::: OgreLog Installing plugin: ParticleFX
+3299619::: OgreLog Particle Emitter Type 'Point' registered
+3299630::: OgreLog Particle Emitter Type 'Box' registered
+3299639::: OgreLog Particle Emitter Type 'Ellipsoid' registered
+3299647::: OgreLog Particle Emitter Type 'Cylinder' registered
+3299654::: OgreLog Particle Emitter Type 'Ring' registered
+3299661::: OgreLog Particle Emitter Type 'HollowEllipsoid' registered
+3299669::: OgreLog Particle Affector Type 'LinearForce' registered
+3299676::: OgreLog Particle Affector Type 'ColourFader' registered
+3299683::: OgreLog Particle Affector Type 'ColourFader2' registered
+3299690::: OgreLog Particle Affector Type 'ColourImage' registered
+3299697::: OgreLog Particle Affector Type 'ColourInterpolator' registered
+3299704::: OgreLog Particle Affector Type 'Scaler' registered
+3299711::: OgreLog Particle Affector Type 'Rotator' registered
+3299718::: OgreLog Particle Affector Type 'DirectionRandomiser' registered
+3299726::: OgreLog Particle Affector Type 'DeflectorPlane' registered
+3299732::: OgreLog Plugin successfully installed
+3299739::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/Plugin_BSPSceneManager
+3300529::: OgreLog Installing plugin: BSP Scene Manager
+3300537::: OgreLog Plugin successfully installed
+3300543::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/Plugin_PCZSceneManager
+3301426::: OgreLog Installing plugin: Portal Connected Zone Scene Manager
+3301439::: OgreLog PCZone Factory Type 'ZoneType_Default' registered
+3301446::: OgreLog Plugin successfully installed
+3301453::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/Plugin_OctreeZone
+3301884::: OgreLog Installing plugin: Octree Zone Factory
+3301894::: OgreLog Plugin successfully installed
+3301909::: OgreLog Loading library /usr/lib/i386-linux-gnu/OGRE-1.8.0/Plugin_OctreeSceneManager
+3302575::: OgreLog Installing plugin: Octree Scene Manager
+3302583::: OgreLog Plugin successfully installed
+3302591::: OgreLog *-*-* OGRE Initialising
+3302597::: OgreLog *-*-* Version 1.8.1 (Byatis)
+3302850::: OgreLog Creating resource group CEGUI
+3302896::: OgreLog Added resource location '/usr/local/share/CEGUI/schemes' of type 'FileSystem' to resource group 'CEGUI'
+3302923::: OgreLog Added resource location '/usr/local/share/CEGUI/fonts' of type 'FileSystem' to resource group 'CEGUI'
+3302947::: OgreLog Added resource location '/usr/local/share/CEGUI/imagesets' of type 'FileSystem' to resource group 'CEGUI'
+3302969::: OgreLog Added resource location '/usr/local/share/CEGUI/layouts' of type 'FileSystem' to resource group 'CEGUI'
+3302994::: OgreLog Added resource location '/usr/local/share/CEGUI/looknfeel' of type 'FileSystem' to resource group 'CEGUI'
+3303018::: OgreLog Added resource location '/usr/local/share/CEGUI/lua_scripts' of type 'FileSystem' to resource group 'CEGUI'
+3303034::: OgreLog Added resource location '/usr/local/share/CEGUI/schemes' of type 'FileSystem' to resource group 'CEGUI'
+3303056::: OgreLog Added resource location '/usr/local/share/CEGUI/xml_schemas' of type 'FileSystem' to resource group 'CEGUI'
+3303065::: OgreLog Creating resource group Essential
+3303389::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/thumbnails' of type 'FileSystem' to resource group 'Essential'
+3303401::: OgreLog Creating resource group Fonts
+3303417::: OgreLog Added resource location '/usr/local/share/CEGUI/fonts' of type 'FileSystem' to resource group 'Fonts'
+3303442::: OgreLog Added resource location '/usr/share/OGRE-1.8.0/media' of type 'FileSystem' to resource group 'General'
+3303466::: OgreLog Added resource location '/home/manicqin/Applications/Blender/box2' of type 'FileSystem' to resource group 'General'
+3303490::: OgreLog Added resource location '/home/manicqin/Projects/BlenderModels/j' of type 'FileSystem' to resource group 'General'
+3303507::: OgreLog Added resource location '/usr/local/share/CEGUI/fonts' of type 'FileSystem' to resource group 'General'
+3303516::: OgreLog Creating resource group Imagesets
+3303534::: OgreLog Added resource location '/usr/local/share/CEGUI/imagesets' of type 'FileSystem' to resource group 'Imagesets'
+3303542::: OgreLog Creating resource group Layouts
+3303558::: OgreLog Added resource location '/usr/local/share/CEGUI/layouts' of type 'FileSystem' to resource group 'Layouts'
+3303583::: OgreLog Added resource location '/home/manicqin/Projects/AutoMages/Configurations' of type 'FileSystem' to resource group 'Layouts'
+3303591::: OgreLog Creating resource group LookNFeel
+3303607::: OgreLog Added resource location '/usr/local/share/CEGUI/looknfeel' of type 'FileSystem' to resource group 'LookNFeel'
+3303614::: OgreLog Creating resource group Popular
+3303811::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/models' of type 'FileSystem' to resource group 'Popular'
+3303830::: OgreLog Added resource location '/usr/local/share/CEGUI/imagesets' of type 'FileSystem' to resource group 'Popular'
+3303846::: OgreLog Added resource location '/usr/local/share/CEGUI/fonts' of type 'FileSystem' to resource group 'Popular'
+3303862::: OgreLog Added resource location '/usr/local/share/CEGUI/schemes' of type 'FileSystem' to resource group 'Popular'
+3303878::: OgreLog Added resource location '/usr/local/share/CEGUI/looknfeel' of type 'FileSystem' to resource group 'Popular'
+3303895::: OgreLog Added resource location '/usr/local/share/CEGUI/layouts' of type 'FileSystem' to resource group 'Popular'
+3304009::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/fonts' of type 'FileSystem' to resource group 'Popular'
+3305469::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/materials/programs' of type 'FileSystem' to resource group 'Popular'
+3305894::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/materials/scripts' of type 'FileSystem' to resource group 'Popular'
+3306541::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/materials/textures' of type 'FileSystem' to resource group 'Popular'
+3306665::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/materials/textures/nvidia' of type 'FileSystem' to resource group 'Popular'
+3306819::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/models' of type 'FileSystem' to resource group 'Popular'
+3306921::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/particle' of type 'FileSystem' to resource group 'Popular'
+3307055::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/DeferredShadingMedia' of type 'FileSystem' to resource group 'Popular'
+3307342::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/PCZAppMedia' of type 'FileSystem' to resource group 'Popular'
+3307652::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/RTShaderLib' of type 'FileSystem' to resource group 'Popular'
+3307801::: OgreLog Added resource location '/home/manicqin/Applications/ogre_src_v1-8-1/Samples/Media/RTShaderLib/materials' of type 'FileSystem' to resource group 'Popular'
+3307813::: OgreLog Creating resource group Schemes
+3307834::: OgreLog Added resource location '/usr/local/share/CEGUI/schemes' of type 'FileSystem' to resource group 'Schemes'
+3308088::: OgreLog CPU Identifier & Features
+3308095::: OgreLog -------------------------
+3308101::: OgreLog  *   CPU ID: GenuineIntel: Intel(R) Core(TM)2 Duo CPU     P9400  @ 2.40GHz
+3308107::: OgreLog  *      SSE: yes
+3308115::: OgreLog  *     SSE2: yes
+3308120::: OgreLog  *     SSE3: yes
+3308125::: OgreLog  *      MMX: yes
+3308130::: OgreLog  *   MMXEXT: yes
+3308135::: OgreLog  *    3DNOW: no
+3308140::: OgreLog  * 3DNOWEXT: no
+3308145::: OgreLog  *     CMOV: yes
+3308150::: OgreLog  *      TSC: yes
+3308156::: OgreLog  *      FPU: yes
+3308160::: OgreLog  *      PRO: yes
+3308166::: OgreLog  *       HT: no
+3308170::: OgreLog -------------------------
+3308186::: OgreLog ******************************
+*** Starting GLX Subsystem ***
+******************************
+3308200::: OgreLog Registering ResourceManager for type Texture
+3308253::: OgreLog GLRenderSystem::_createRenderWindow "AutoMages", 1280x800 fullscreen  miscParams: FSAA=0 displayFrequency=60 Hz gamma=No vsync=No 
+3322075::: OgreLog GLXWindow::create used FBConfigID = 103
+3322111::: OgreLog GL_VERSION = 2.1 Mesa 10.1.3
+3322123::: OgreLog GL_VENDOR = Intel Open Source Technology Center
+3322135::: OgreLog GL_RENDERER = Mesa DRI Mobile Intel® GM45 Express Chipset x86/MMX/SSE2
+3322159::: OgreLog GL_EXTENSIONS = GL_ARB_multisample GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_copy_texture GL_EXT_polygon_offset GL_EXT_subtexture GL_EXT_texture_object GL_EXT_vertex_array GL_EXT_compiled_vertex_array GL_EXT_texture GL_EXT_texture3D GL_IBM_rasterpos_clip GL_ARB_point_parameters GL_EXT_draw_range_elements GL_EXT_packed_pixels GL_EXT_point_parameters GL_EXT_rescale_normal GL_EXT_separate_specular_color GL_EXT_texture_edge_clamp GL_SGIS_generate_mipmap GL_SGIS_texture_border_clamp GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_ARB_framebuffer_sRGB GL_ARB_multitexture GL_EXT_framebuffer_sRGB GL_IBM_multimode_draw_arrays GL_IBM_texture_mirrored_repeat GL_3DFX_texture_compression_FXT1 GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_transpose_matrix GL_EXT_blend_func_separate GL_EXT_fog_coord GL_EXT_multi_draw_arrays GL_EXT_secondary_color GL_EXT_texture_env_add GL_EXT_texture_filter_anisotropic GL_EXT_texture_lod_bias GL_INGR_blend_func_separate GL_NV_blend_square GL_NV_light_max_exponent GL_NV_texgen_reflection GL_NV_texture_env_combine4 GL_S3_s3tc GL_SUN_multi_draw_arrays GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_EXT_framebuffer_object GL_EXT_texture_compression_s3tc GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_MESA_window_pos GL_NV_packed_depth_stencil GL_NV_texture_rectangle GL_ARB_depth_texture GL_ARB_occlusion_query GL_ARB_shadow GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_mirrored_repeat GL_ARB_window_pos GL_ATI_envmap_bumpmap GL_EXT_stencil_two_side GL_EXT_texture_cube_map GL_NV_depth_clamp GL_APPLE_packed_pixels GL_APPLE_vertex_array_object GL_ARB_draw_buffers GL_ARB_fragment_program GL_ARB_fragment_shader GL_ARB_shader_objects GL_ARB_vertex_program GL_ARB_vertex_shader GL_ATI_draw_buffers GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_MESA_pack_invert GL_NV_primitive_restart GL_ARB_depth_clamp GL_ARB_fragment_program_shadow GL_ARB_half_float_pixel GL_ARB_occlusion_query2 GL_ARB_point_sprite GL_ARB_shading_language_100 GL_ARB_sync GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ATI_blend_equation_separate GL_EXT_blend_equation_separate GL_OES_read_format GL_ARB_color_buffer_float GL_ARB_pixel_buffer_object GL_ARB_texture_compression_rgtc GL_ARB_texture_float GL_ARB_texture_rectangle GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_shared_exponent GL_ARB_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_packed_depth_stencil GL_APPLE_object_purgeable GL_ARB_vertex_array_object GL_ATI_separate_stencil GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_gpu_program_parameters GL_EXT_texture_array GL_EXT_texture_integer GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_draw_instanced GL_ARB_half_float_vertex GL_ARB_instanced_arrays GL_ARB_map_buffer_range GL_ARB_texture_rg GL_ARB_texture_swizzle GL_ARB_vertex_array_bgra GL_EXT_separate_shader_objects GL_EXT_texture_swizzle GL_EXT_vertex_array_bgra GL_NV_conditional_render GL_AMD_seamless_cubemap_per_texture GL_ARB_ES2_compatibility GL_ARB_debug_output GL_ARB_draw_elements_base_vertex GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_provoking_vertex GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_shader_texture_lod GL_ARB_texture_rgb10_a2ui GL_ARB_vertex_type_2_10_10_10_rev GL_EXT_provoking_vertex GL_EXT_texture_snorm GL_MESA_texture_signed_rgba GL_ARB_get_program_binary GL_ARB_robustness GL_ARB_shader_bit_encoding GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_internalformat_query GL_ARB_map_buffer_alignment GL_ARB_texture_storage GL_AMD_shader_trinary_minmax GL_ARB_clear_buffer_object GL_ARB_invalidate_subdata GL_ARB_vertex_attrib_binding GL_KHR_debug GL_ARB_texture_mirror_clamp_to_edge 
+3322401::: OgreLog Supported GLX extensions: GLX_ARB_create_context GLX_ARB_create_context_profile GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_import_context GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_framebuffer_sRGB GLX_EXT_create_context_es2_profile GLX_MESA_copy_sub_buffer GLX_MESA_multithread_makecurrent GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_swap_method GLX_OML_sync_control GLX_SGI_make_current_read GLX_SGI_swap_control GLX_SGI_video_sync GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_EXT_texture_from_pixmap GLX_INTEL_swap_event 
+3322442::: OgreLog ***************************
+3322448::: OgreLog *** GL Renderer Started ***
+3322454::: OgreLog ***************************
+3326792::: OgreLog Registering ResourceManager for type GpuProgram
+3326836::: OgreLog GLSL support detected
+3326845::: OgreLog GL: Using GL_EXT_framebuffer_object for rendering to textures (best)
+3327426::: OgreLog FBO PF_UNKNOWN depth/stencil support: D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3327980::: OgreLog FBO PF_A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3328495::: OgreLog FBO PF_R5G6B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3328959::: OgreLog FBO PF_B5G6R5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3329441::: OgreLog FBO PF_A4R4G4B4 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3329906::: OgreLog FBO PF_A1R5G5B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3330371::: OgreLog FBO PF_R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3330831::: OgreLog FBO PF_B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3331293::: OgreLog FBO PF_A8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3331752::: OgreLog FBO PF_B8G8R8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3332214::: OgreLog FBO PF_A2R10G10B10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3332669::: OgreLog FBO PF_A2B10G10R10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3333411::: OgreLog FBO PF_FLOAT16_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3333875::: OgreLog FBO PF_FLOAT32_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3334332::: OgreLog FBO PF_FLOAT32_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3334790::: OgreLog FBO PF_X8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3335239::: OgreLog FBO PF_X8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3335696::: OgreLog FBO PF_SHORT_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3336148::: OgreLog FBO PF_R3G3B2 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3336735::: OgreLog FBO PF_FLOAT16_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3337226::: OgreLog FBO PF_FLOAT32_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8 
+3337363::: OgreLog [GL] : Valid FBO targets PF_UNKNOWN PF_A8 PF_R5G6B5 PF_B5G6R5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_B8G8R8A8 PF_A2R10G10B10 PF_A2B10G10R10 PF_FLOAT16_RGBA PF_FLOAT32_RGB PF_FLOAT32_RGBA PF_X8R8G8B8 PF_X8B8G8R8 PF_SHORT_RGBA PF_R3G3B2 PF_FLOAT16_R PF_FLOAT32_R 
+3337376::: OgreLog RenderSystem capabilities
+3337384::: OgreLog -------------------------
+3337390::: OgreLog RenderSystem Name: OpenGL Rendering Subsystem
+3337398::: OgreLog GPU Vendor: intel
+3337404::: OgreLog Device Name: Mesa DRI Mobile Intel® GM45 Express Chipset x86/MMX/SSE2
+3337418::: OgreLog Driver Version: 2.1.0.0
+3337424::: OgreLog  * Fixed function pipeline: yes
+3337430::: OgreLog  * Hardware generation of mipmaps: no
+3337435::: OgreLog  * Texture blending: yes
+3337440::: OgreLog  * Anisotropic texture filtering: yes
+3337445::: OgreLog  * Dot product texture operation: yes
+3337450::: OgreLog  * Cube mapping: yes
+3337455::: OgreLog  * Hardware stencil buffer: yes
+3337463::: OgreLog    - Stencil depth: 8
+3337468::: OgreLog    - Two sided stencil support: yes
+3337473::: OgreLog    - Wrap stencil values: yes
+3337478::: OgreLog  * Hardware vertex / index buffers: yes
+3337483::: OgreLog  * Vertex programs: yes
+3337493::: OgreLog  * Number of floating-point constants for vertex programs: 4096
+3337502::: OgreLog  * Number of integer constants for vertex programs: 0
+3337510::: OgreLog  * Number of boolean constants for vertex programs: 0
+3337516::: OgreLog  * Fragment programs: yes
+3337524::: OgreLog  * Number of floating-point constants for fragment programs: 4096
+3337532::: OgreLog  * Number of integer constants for fragment programs: 0
+3337540::: OgreLog  * Number of boolean constants for fragment programs: 0
+3337546::: OgreLog  * Geometry programs: no
+3337554::: OgreLog  * Number of floating-point constants for geometry programs: 0
+3337562::: OgreLog  * Number of integer constants for geometry programs: 0
+3337571::: OgreLog  * Number of boolean constants for geometry programs: 0
+3337578::: OgreLog  * Supported Shader Profiles: arbfp1 arbvp1 glsl
+3337583::: OgreLog  * Texture Compression: yes
+3337589::: OgreLog    - DXT: yes
+3337594::: OgreLog    - VTC: no
+3337599::: OgreLog    - PVRTC: no
+3337604::: OgreLog  * Scissor Rectangle: yes
+3337609::: OgreLog  * Hardware Occlusion Query: yes
+3337616::: OgreLog  * User clip planes: yes
+3337621::: OgreLog  * VET_UBYTE4 vertex element type: yes
+3337626::: OgreLog  * Infinite far plane projection: yes
+3337631::: OgreLog  * Hardware render-to-texture: yes
+3337636::: OgreLog  * Floating point textures: yes
+3337641::: OgreLog  * Non-power-of-two textures: yes
+3337646::: OgreLog  * Volume textures: yes
+3337654::: OgreLog  * Multiple Render Targets: 8
+3337660::: OgreLog    - With different bit depths: yes
+3337664::: OgreLog  * Point Sprites: yes
+3337669::: OgreLog  * Extended point parameters: yes
+3337706::: OgreLog  * Max Point Size: 255
+3337712::: OgreLog  * Vertex texture fetch: yes
+3337720::: OgreLog  * Number of world matrices: 0
+3337728::: OgreLog  * Number of texture units: 16
+3337736::: OgreLog  * Stencil buffer depth: 8
+3337744::: OgreLog  * Number of vertex blend matrices: 0
+3337752::: OgreLog    - Max vertex textures: 16
+3337758::: OgreLog    - Vertex textures shared: yes
+3337763::: OgreLog  * Render to Vertex Buffer : no
+3337768::: OgreLog  * GL 1.5 without VBO workaround: no
+3337773::: OgreLog  * Frame Buffer objects: yes
+3337778::: OgreLog  * Frame Buffer objects (ARB extension): no
+3337783::: OgreLog  * Frame Buffer objects (ATI extension): no
+3337788::: OgreLog  * PBuffer support: yes
+3337793::: OgreLog  * GL 1.5 without HW-occlusion workaround: no
+3337798::: OgreLog  * Separate shader objects: no
+3339305::: OgreLog DefaultWorkQueue('Root') initialising on thread b0affb40.
+3339456::: OgreLog Particle Renderer Type 'billboard' registered
+3339751::: OgreLog SceneManagerFactory for type 'BspSceneManager' registered.
+3339771::: OgreLog Registering ResourceManager for type BspLevel
+3339785::: OgreLog SceneManagerFactory for type 'PCZSceneManager' registered.
+3339796::: OgreLog MovableObjectFactory for type 'PCZLight' registered.
+3339806::: OgreLog MovableObjectFactory for type 'Portal' registered.
+3339814::: OgreLog MovableObjectFactory for type 'AntiPortal' registered.
+3339822::: OgreLog PCZone Factory Type 'ZoneType_Octree' registered
+3339833::: OgreLog SceneManagerFactory for type 'OctreeSceneManager' registered.
+3339913::: OgreSystem::createCamera
+3340012::: OgreSystem::createCamera created a camera DefaultCamera at Vector3(200, 100, 200)
+3340104::: OgreLog Parsing scripts for resource group Autodetect
+3340129::: OgreLog Finished parsing scripts for resource group Autodetect
+3340140::: OgreLog Creating resources for group Autodetect
+3340145::: OgreLog All done
+3340151::: OgreLog Parsing scripts for resource group CEGUI
+3340357::: OgreLog Finished parsing scripts for resource group CEGUI
+3340367::: OgreLog Creating resources for group CEGUI
+3340373::: OgreLog All done
+3340378::: OgreLog Parsing scripts for resource group Essential
+3340760::: OgreLog Finished parsing scripts for resource group Essential
+3340771::: OgreLog Creating resources for group Essential
+3340776::: OgreLog All done
+3340781::: OgreLog Parsing scripts for resource group Fonts
+3340820::: OgreLog Finished parsing scripts for resource group Fonts
+3340829::: OgreLog Creating resources for group Fonts
+3340834::: OgreLog All done
+3340839::: OgreLog Parsing scripts for resource group General
+3340950::: OgreLog Finished parsing scripts for resource group General
+3340959::: OgreLog Creating resources for group General
+3340964::: OgreLog All done
+3340969::: OgreLog Parsing scripts for resource group Imagesets
+3341028::: OgreLog Finished parsing scripts for resource group Imagesets
+3341038::: OgreLog Creating resources for group Imagesets
+3341043::: OgreLog All done
+3341048::: OgreLog Parsing scripts for resource group Internal
+3341060::: OgreLog Finished parsing scripts for resource group Internal
+3341068::: OgreLog Creating resources for group Internal
+3341073::: OgreLog All done
+3341078::: OgreLog Parsing scripts for resource group Layouts
+3341143::: OgreLog Finished parsing scripts for resource group Layouts
+3341152::: OgreLog Creating resources for group Layouts
+3341157::: OgreLog All done
+3341162::: OgreLog Parsing scripts for resource group LookNFeel
+3341199::: OgreLog Finished parsing scripts for resource group LookNFeel
+3341208::: OgreLog Creating resources for group LookNFeel
+3341212::: OgreLog All done
+3341217::: OgreLog Parsing scripts for resource group Popular
+3345249::: OgreLog DefaultWorkQueue('Root')::WorkerFunc - thread ae4fdb40 starting.
+3347158::: OgreLog Parsing script Instancing.program
+3348266::: OgreLog DefaultWorkQueue('Root')::WorkerFunc - thread aecfeb40 starting.
+3348736::: OgreLog Parsing script Examples.program
+3352146::: OgreLog Parsing script StdQuad_vp.program
+3353530::: OgreLog Parsing script DualQuaternion.program
+3361556::: OgreLog Parsing script ShadowCaster.program
+3361813::: OgreLog Parsing script deferred_post.program
+3362499::: OgreLog Parsing script MRTtest.material
+3363723::: OgreLog Parsing script ShaderInstancing.material
+3368014::: OgreLog Parsing script Posterize.material
+3368561::: OgreLog Parsing script Ocean.material
+3376821::: OgreLog Parsing script Examples-DynTex.material
+3377232::: OgreLog Parsing script HeatVision.material
+3379489::: OgreLog Parsing script Glass.material
+3379976::: OgreLog Parsing script Bloom2.material
+3382434::: OgreLog Parsing script VTFInstancing.material
+3386358::: OgreLog Parsing script Example-Water.material
+3387560::: OgreLog Parsing script NightVision.material
+3387932::: OgreLog Parsing script sibenik.material
+3389939::: OgreLog Parsing script CGSwizzle.material
+3390139::: OgreLog Parsing script SharpenEdges.material
+3390601::: OgreLog Parsing script ASCII.material
+3391034::: OgreLog Parsing script Embossed.material
+3391366::: OgreLog Parsing script HWInstancing.material
+3392523::: OgreLog Parsing script DOF.material
+3393199::: OgreLog Parsing script OldTV.material
+3393732::: OgreLog Parsing script HW_VTF_LUTInstancing.material
+3397721::: OgreLog Parsing script CompositorDemo.material
+3397886::: OgreLog Parsing script Invert.material
+3398224::: OgreLog Parsing script ASMSwizzle.material
+3398344::: OgreLog Compiler error: object unsupported by render system in ASMSwizzle.material(1)
+3398413::: OgreLog Parsing script RZR-002.material
+3398520::: OgreLog Parsing script Bloom.material
+3400032::: OgreLog Parsing script Examples.material
+3414562::: OgreLog Parsing script Ogre.material
+3415263::: OgreLog Parsing script RadialBlur.material
+3415660::: OgreLog Parsing script Examples-Advanced.material
+3420939::: OgreLog Compiler error: object unsupported by render system in Examples-Advanced.material(524)
+3421457::: OgreLog Compiler error: object unsupported by render system in Examples-Advanced.material(787)
+3422253::: OgreLog Parsing script shadows.material
+3423387::: OgreLog Parsing script ParticleGS.material
+3424784::: OgreLog Parsing script GLSLSwizzle.material
+3425239::: OgreLog Parsing script Tiling.material
+3425618::: OgreLog Parsing script pssm.material
+3427226::: OgreLog Parsing script instancing.material
+3429445::: OgreLog Parsing script hdr.material
+3432304::: OgreLog Parsing script MotionBlur.material
+3433072::: OgreLog Parsing script DualQuaternion.material
+3433804::: OgreLog Parsing script Hurt.material
+3434005::: OgreLog Parsing script Halftone.material
+3434444::: OgreLog Parsing script facial.material
+3435098::: OgreLog Parsing script DepthShadowmap.material
+3441434::: OgreLog Parsing script HW_VTFInstancing.material
+3445443::: OgreLog Parsing script BlackAndWhite.material
+3445822::: OgreLog Parsing script OffsetMapping.material
+3448020::: OgreLog Compiler error: object unsupported by render system in OffsetMapping.material(35)
+3449022::: OgreLog Parsing script Penguin.material
+3449185::: OgreLog Parsing script smoke.material
+3449343::: OgreLog Parsing script Dither.material
+3449731::: OgreLog Parsing script VarianceShadowmap.material
+3450400::: OgreLog Parsing script Laplace.material
+3450776::: OgreLog Parsing script IsoSurf.material
+3451613::: OgreLog Parsing script InstancingMisc.material
+3452266::: OgreLog Parsing script Examples-Water.material
+3453480::: OgreLog Parsing script ShaderSystem.material
+3453635::: OgreLog Parsing script OldMovie.material
+3454323::: OgreLog Parsing script deferreddemo.material
+3454819::: OgreLog Parsing script ssao.material
+3455737::: OgreLog Parsing script deferred_post.material
+3456741::: OgreLog Parsing script ShadowCaster.material
+3456885::: OgreLog Parsing script deferred_post_minilight.material
+3457553::: OgreLog Parsing script ROOM.material
+3458579::: OgreLog Parsing script HardwareSkinningShadow.material
+3460493::: OgreLog Parsing script DualQuaternionSkinning_Shadow.material
+3463628::: OgreLog Parsing script RTShaderSystem.material
+3464602::: OgreLog Compiler error: unknown error in RTShaderSystem.material(23): token "rtshader_system" is not recognized
+3464638::: OgreLog Compiler error: unknown error in RTShaderSystem.material(52): token "rtshader_system" is not recognized
+3464670::: OgreLog Compiler error: unknown error in RTShaderSystem.material(81): token "rtshader_system" is not recognized
+3464696::: OgreLog Compiler error: unknown error in RTShaderSystem.material(110): token "rtshader_system" is not recognized
+3464739::: OgreLog Compiler error: unknown error in RTShaderSystem.material(146): token "rtshader_system" is not recognized
+3464770::: OgreLog Compiler error: unknown error in RTShaderSystem.material(81): token "rtshader_system" is not recognized
+3464792::: OgreLog Compiler error: unknown error in RTShaderSystem.material(162): token "rtshader_system" is not recognized
+3464832::: OgreLog Compiler error: unknown error in RTShaderSystem.material(81): token "rtshader_system" is not recognized
+3464853::: OgreLog Compiler error: unknown error in RTShaderSystem.material(110): token "rtshader_system" is not recognized
+3464911::: OgreLog Compiler error: unknown error in RTShaderSystem.material(211): token "rtshader_system" is not recognized
+3465159::: OgreLog Parsing script Examples.particle
+3468776::: OgreLog Parsing script smoke.particle
+3469229::: OgreLog Parsing script emitted_emitter.particle
+3469822::: OgreLog Parsing script Examples-Water.particle
+3470182::: OgreLog Parsing script Examples.compositor
+3474442::: OgreLog Parsing script ssao.compositor
+3475115::: OgreLog Parsing script deferred.compositor
+3475955::: OgreLog Parsing script sample.fontdef
+3476039::: OgreLog Finished parsing scripts for resource group Popular
+3476060::: OgreLog Creating resources for group Popular
+3476066::: OgreLog All done
+3476070::: OgreLog Parsing scripts for resource group Schemes
+3476111::: OgreLog Finished parsing scripts for resource group Schemes
+3476119::: OgreLog Creating resources for group Schemes
+3476124::: OgreLog All done
+3476154::: OgreLog Mesh: Loading fish.mesh.
+3476660::: OgreLog Skeleton: Loading fish.skeleton
+3480621::: OgreLog Texture: steelhead.png: Loading 1 faces(PF_R8G8B8,256x256x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+3482154::: OgreLog WARNING: the mesh 'fish.mesh' includes vertices without bone assignments. Those vertices will transform to wrong position when skeletal animation enabled. To eliminate this, assign at least one bone assignment per vertex on your mesh.
+3483784::: OgreLog Texture: clouds.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+3488025::: OgreLog Texture: rockwall.tga: Loading 1 faces(PF_R8G8B8,256x256x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+3489424::: Start Rendering
+3613400::: dynamicsWorld not initialized
+3613428::: dynamicsWorld not initialized
+3913992::: dynamicsWorld not initialized
+3914020::: dynamicsWorld not initialized
+4014240::: dynamicsWorld not initialized
+4014267::: dynamicsWorld not initialized
+4040169::: Intializing EntitySystem
+4109237::: EntitySystem::createScene found 1 Scenes
+4109333::: Creating components for 7
+4109463::: Creating EntityWorldComponent for 7 1
+4191530::: OgreSystem::createComponent entity 7 using EntityWorldComponent 1
+4215355::: PhysicsSystem::createComponent entity 7 using EntityWorldComponent 1
+4309860::: Creating components for 8
+4309991::: Creating EntityWorldComponent for 8 2
+4392119::: OgreSystem::createCamera
+4392273::: OgreSystem::createCamera created a camera DefaultCamera at Vector3(500, 300, 500)
+4416202::: dynamicsWorld not initialized
+4416726::: PhysicsSystem::createComponent entity 8 using EntityWorldComponent 2
+4416799::: PhysicsSystem::createComponent entity 8 doesn't have RenderComponent so we need to use the Envelope field from physicsComponent... hope you supplied it
+4517283::: dynamicsWorld not initialized
+5018679::: dynamicsWorld not initialized
+5042429::: Starting Physics
+5042479::: Starting Controller
+5042510::: init Finished
+5042578::: None5115966::: ControllerSystem::startSystem found window
+5119074::: Physics: 7: 112.500000 137.497208 137.500000
+5119246::: Physics: 7: 112.500000 137.491608 137.500000
+5119385::: Physics: 7: 112.500000 137.483154 137.500000
+5119524::: Physics: 7: 112.500000 137.472534 137.500000
+5119661::: Physics: 7: 112.500000 137.458572 137.500000
+5143134::: ScriptSystem::createComponent Loading script /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/keys.py
+5172775::: Importing engine environment
+5172791::: 
+
+5173463::: /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/keys.py was parsed
+5173474::: 
+
+5173521::: ('SystemWrapper init system', 51)
+5173531::: 
+
+5173552::: /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/SystemWrapperBase.py init
+5173562::: 
+
+5174026::: ScriptSystem::createComponent Loading script /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/Controls.py
+5182120::: /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/Controls.py was parsed
+5182175::: ('SystemWrapper init system', 11)
+5182188::: 
+
+5182211::: /home/manicqin/Dropbox/AutoMages/AutoMagesLink/cleanProject/SystemsTest/Scripts/SystemWrapperBase.py init
+5182221::: 
+
+5193983::: Frame: 103 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+5194009::: OgreSystem::PositionChanged finished entity: 7
+5220249::: Physics: 7: 112.500000 137.442764 137.500000
+5220500::: Physics: 7: 112.500000 137.422165 137.500000
+5220738::: Physics: 7: 112.500000 137.401016 137.500000
+5220975::: Physics: 7: 112.500000 137.375900 137.500000
+5221249::: Physics: 7: 112.500000 137.347931 137.500000
+5221487::: Physics: 7: 112.500000 137.317154 137.500000
+5293765::: Frame: 109 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+5293791::: OgreSystem::PositionChanged finished entity: 7
+5321961::: Physics: 7: 112.500000 137.285477 137.500000
+5322071::: Physics: 7: 112.500000 137.249176 137.500000
+5322175::: Physics: 7: 112.500000 137.210052 137.500000
+5322280::: Physics: 7: 112.500000 137.168091 137.500000
+5322383::: Physics: 7: 112.500000 137.125900 137.500000
+5322487::: Physics: 7: 112.500000 137.078430 137.500000
+5394755::: Frame: 115 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+5394818::: OgreSystem::PositionChanged finished entity: 7
+5423064::: Physics: 7: 112.500000 137.028122 137.500000
+5423312::: Physics: 7: 112.500000 136.978104 137.500000
+5423551::: Physics: 7: 112.500000 136.925552 137.500000
+5423788::: Physics: 7: 112.500000 136.867081 137.500000
+5424022::: Physics: 7: 112.500000 136.805771 137.500000
+5424271::: Physics: 7: 112.500000 136.741623 137.500000
+5494995::: Frame: 121 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+5495062::: OgreSystem::PositionChanged finished entity: 7
+5524927::: Physics: 7: 112.500000 136.674652 137.500000
+5525207::: Physics: 7: 112.500000 136.604828 137.500000
+5525447::: Physics: 7: 112.500000 136.532181 137.500000
+5525684::: Physics: 7: 112.500000 136.461105 137.500000
+5525920::: Physics: 7: 112.500000 136.382965 137.500000
+5526155::: Physics: 7: 112.500000 136.306717 137.500000
+5595328::: Frame: 127 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+5595396::: OgreSystem::PositionChanged finished entity: 7
+5626665::: Physics: 7: 112.500000 136.223053 137.500000
+5626923::: Physics: 7: 112.500000 136.141632 137.500000
+5627162::: Physics: 7: 112.500000 136.047241 137.500000
+5627399::: Physics: 7: 112.500000 135.960480 137.500000
+5627671::: Physics: 7: 112.500000 135.865646 137.500000
+5627914::: Physics: 7: 112.500000 135.773712 137.500000
+5695685::: Frame: 133 num of entities: 1 time from last frame 0.016000 time from last event 0.015000
+5695755::: OgreSystem::PositionChanged finished entity: 7
+5728454::: Physics: 7: 112.500000 135.673386 137.500000
+5728721::: Physics: 7: 112.500000 135.570206 137.500000
+5728965::: Physics: 7: 112.500000 135.464203 137.500000
+5729271::: Physics: 7: 112.500000 135.355362 137.500000
+5729514::: Physics: 7: 112.500000 135.250244 137.500000
+5729757::: Physics: 7: 112.500000 135.135895 137.500000
+5795759::: Frame: 139 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+5795827::: OgreSystem::PositionChanged finished entity: 7
+5830276::: Physics: 7: 112.500000 135.025589 137.500000
+5830536::: Physics: 7: 112.500000 134.905746 137.500000
+5830775::: Physics: 7: 112.500000 134.783066 137.500000
+5831011::: Physics: 7: 112.500000 134.664917 137.500000
+5831246::: Physics: 7: 112.500000 134.536728 137.500000
+5831482::: Physics: 7: 112.500000 134.405701 137.500000
+5831719::: Physics: 7: 112.500000 134.271851 137.500000
+5895878::: Frame: 145 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+5895944::: OgreSystem::PositionChanged finished entity: 7
+5932298::: Physics: 7: 112.500000 134.143173 137.500000
+5932554::: Physics: 7: 112.500000 134.003815 137.500000
+5932793::: Physics: 7: 112.500000 133.861633 137.500000
+5933056::: Physics: 7: 112.500000 133.725113 137.500000
+5933295::: Physics: 7: 112.500000 133.568756 137.500000
+5933532::: Physics: 7: 112.500000 133.426880 137.500000
+5995980::: Frame: 151 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+5996050::: OgreSystem::PositionChanged finished entity: 7
+6003499::: 4 PhysicsComponent 2
+6003563::: 2 EntityWorldComponent 2
+6003620::: 10 RenderComponent 1
+6003677::: 20 CameraComponent 1
+6003735::: 8 LocomotionComponent 0
+6003790::: 1 MiscComponent 1
+6003844::: 40 ScriptComponent 2
+6004004::: Messages: 13
+1:CreateComponentMsg
+11:InitSystemMsg
+31:StartSystemMsg
+51:ChanneledMessages
+81:LogMessage
+91:PositionChangedMsg
+101:CreateCameraComponentMsg
+151:ScriptExecuteFile
+171:ScriptCallFunctionMsg
+271:TickMsg
+281:CreateSceneMsg
+291:CreateEntityMsg
+321:CaptureMsg
+
+6004069::: Components: 7
+1:MiscComponent
+2:EntityWorldComponent
+4:PhysicsComponent
+8:LocomotionComponent
+16:RenderComponent
+32:CameraComponent
+64:ScriptComponent
+
+6004125::: Systems: 6
+1:LoggingSystem
+11:OgreSystem
+21:ScriptSystem
+31:PhysicsSystem
+41:ComponentsSystem
+51:ControllerSystem
+
+6005227::: 
+Entity: 1  type: 0
+			 |_                         _|_          _|_          _| 
+Entity: 2  type: 0x40	 |_        Comp Name        _|_ Comp Type_|_  Comp Id _| 
+			 |      ScriptComponent      |    0x40    |      2     | 
+			 |_                         _|_          _|_          _| 
+Entity: 3  type: 0
+			 |_                         _|_          _|_          _| 
+Entity: 4  type: 0
+			 |_                         _|_          _|_          _| 
+Entity: 5  type: 0
+			 |_                         _|_          _|_          _| 
+Entity: 6  type: 0x40	 |_        Comp Name        _|_ Comp Type_|_  Comp Id _| 
+			 |      ScriptComponent      |    0x40    |      1     | 
+			 |_                         _|_          _|_          _| 
+Entity: 7  type: 0x16	 |_        Comp Name        _|_ Comp Type_|_  Comp Id _| 
+			 |    EntityWorldComponent   |     0x2    |      1     | 
+			 |      PhysicsComponent     |     0x4    |      1     | 
+			 |      RenderComponent      |    0x10    |      1     | 
+			 |_                         _|_          _|_          _| 
+Entity: 8  type: 0x26	 |_        Comp Name        _|_ Comp Type_|_  Comp Id _| 
+			 |    EntityWorldComponent   |     0x2    |      2     | 
+			 |      PhysicsComponent     |     0x4    |      2     | 
+			 |      CameraComponent      |    0x20    |      1     | 
+			 |_                         _|_          _|_          _| 
+
+6034251::: Physics: 7: 112.500000 133.273529 137.500000
+6034510::: Physics: 7: 112.500000 133.126480 137.500000
+6034749::: Physics: 7: 112.500000 132.967621 137.500000
+6034986::: Physics: 7: 112.500000 132.805908 137.500000
+6035222::: Physics: 7: 112.500000 132.651016 137.500000
+6035477::: Physics: 7: 112.500000 132.473999 137.500000
+6095598::: Frame: 157 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+6095623::: OgreSystem::PositionChanged finished entity: 7
+6136156::: Physics: 7: 112.500000 132.263901 137.500000
+6136411::: Physics: 7: 112.500000 132.110489 137.500000
+6136650::: Physics: 7: 112.500000 131.975494 137.500000
+6136886::: Physics: 7: 112.500000 131.807587 137.500000
+6137163::: Physics: 7: 112.500000 131.626541 137.500000
+6137403::: Physics: 7: 112.500000 131.442642 137.500000
+6197305::: Frame: 163 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+6197384::: OgreSystem::PositionChanged finished entity: 7
+6238076::: Physics: 7: 112.500000 131.255936 137.500000
+6238331::: Physics: 7: 112.500000 131.077499 137.500000
+6238570::: Physics: 7: 112.500000 130.885284 137.500000
+6238807::: Physics: 7: 112.500000 130.678787 137.500000
+6239045::: Physics: 7: 112.500000 130.492340 137.500000
+6239280::: Physics: 7: 112.500000 130.291611 137.500000
+6296896::: Frame: 169 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+6296964::: OgreSystem::PositionChanged finished entity: 7
+6339926::: Physics: 7: 112.500000 130.088043 137.500000
+6340178::: Physics: 7: 112.500000 129.869568 137.500000
+6340415::: Physics: 7: 112.500000 129.684692 137.500000
+6340652::: Physics: 7: 112.500000 129.472809 137.500000
+6340887::: Physics: 7: 112.500000 129.258087 137.500000
+6341177::: Physics: 7: 112.500000 129.040512 137.500000
+6396974::: Frame: 175 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+6397106::: OgreSystem::PositionChanged finished entity: 7
+6441623::: Physics: 7: 112.500000 128.845947 137.500000
+6441876::: Physics: 7: 112.500000 128.609970 137.500000
+6442114::: Physics: 7: 112.500000 128.397308 137.500000
+6442350::: Physics: 7: 112.500000 128.182144 137.500000
+6442585::: Physics: 7: 112.500000 127.950897 137.500000
+6442820::: Physics: 7: 112.500000 127.716820 137.500000
+6497343::: Frame: 181 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+6497411::: OgreSystem::PositionChanged finished entity: 7
+6543317::: Physics: 7: 112.500000 127.493805 137.500000
+6543569::: Physics: 7: 112.500000 127.254219 137.500000
+6543808::: Physics: 7: 112.500000 127.011803 137.500000
+6544044::: Physics: 7: 112.500000 126.766556 137.500000
+6544280::: Physics: 7: 112.500000 126.533028 137.500000
+6544515::: Physics: 7: 112.500000 126.282272 137.500000
+6598330::: Frame: 187 num of entities: 1 time from last frame 0.018000 time from last event 0.018000
+6598419::: OgreSystem::PositionChanged finished entity: 7
+6645258::: Physics: 7: 112.500000 126.028679 137.500000
+6645516::: Physics: 7: 112.500000 125.787300 137.500000
+6645755::: Physics: 7: 112.500000 125.528206 137.500000
+6645992::: Physics: 7: 112.500000 125.250908 137.500000
+6646228::: Physics: 7: 112.500000 125.001518 137.500000
+6646493::: Physics: 7: 112.500000 124.749626 137.500000
+6698580::: Frame: 193 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+6698666::: OgreSystem::PositionChanged finished entity: 7
+6747152::: Physics: 7: 112.500000 124.479355 137.500000
+6747526::: Physics: 7: 112.500000 124.206253 137.500000
+6747770::: Physics: 7: 112.500000 123.946510 137.500000
+6748020::: Physics: 7: 112.500000 123.651558 137.500000
+6748261::: Physics: 7: 112.500000 123.386467 137.500000
+6748500::: Physics: 7: 112.500000 123.102203 137.500000
+6798782::: Frame: 199 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+6798871::: OgreSystem::PositionChanged finished entity: 7
+6848972::: Physics: 7: 112.500000 122.831932 137.500000
+6849287::: Physics: 7: 112.500000 122.542152 137.500000
+6849527::: Physics: 7: 112.500000 122.249542 137.500000
+6849765::: Physics: 7: 112.500000 121.954102 137.500000
+6850001::: Physics: 7: 112.500000 121.655823 137.500000
+6850236::: Physics: 7: 112.500000 121.372375 137.500000
+6850472::: Physics: 7: 112.500000 121.086411 137.500000
+6897919::: Frame: 205 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+6897984::: OgreSystem::PositionChanged finished entity: 7
+6950966::: Physics: 7: 112.500000 120.779953 137.500000
+6951218::: Physics: 7: 112.500000 120.470665 137.500000
+6951456::: Physics: 7: 112.500000 120.176857 137.500000
+6951692::: Physics: 7: 112.500000 119.862068 137.500000
+6951928::: Physics: 7: 112.500000 119.544449 137.500000
+6952163::: Physics: 7: 112.500000 119.223984 137.500000
+6998160::: Frame: 211 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+6998226::: OgreSystem::PositionChanged finished entity: 7
+7052659::: Physics: 7: 112.500000 118.919655 137.500000
+7052911::: Physics: 7: 112.500000 118.593689 137.500000
+7053174::: Physics: 7: 112.500000 118.264893 137.500000
+7053411::: Physics: 7: 112.500000 117.952721 137.500000
+7053648::: Physics: 7: 112.500000 117.618416 137.500000
+7053884::: Physics: 7: 112.500000 117.261490 137.500000
+7098434::: Frame: 217 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+7098499::: OgreSystem::PositionChanged finished entity: 7
+7154644::: Physics: 7: 112.500000 116.941307 137.500000
+7154953::: Physics: 7: 112.500000 116.618607 137.500000
+7155234::: Physics: 7: 112.500000 116.273140 137.500000
+7155513::: Physics: 7: 112.500000 115.924828 137.500000
+7155789::: Physics: 7: 112.500000 115.594284 137.500000
+7156064::: Physics: 7: 112.500000 115.240471 137.500000
+7199540::: Frame: 223 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+7199628::: OgreSystem::PositionChanged finished entity: 7
+7256578::: Physics: 7: 112.500000 114.862892 137.500000
+7256824::: Physics: 7: 112.500000 114.545433 137.500000
+7257110::: Physics: 7: 112.500000 114.162025 137.500000
+7257347::: Physics: 7: 112.500000 113.818298 137.500000
+7257579::: Physics: 7: 112.500000 113.428894 137.500000
+7257811::: Physics: 7: 112.500000 113.079819 137.500000
+7315474::: Frame: 230 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+7315544::: OgreSystem::PositionChanged finished entity: 7
+7358287::: Physics: 7: 112.500000 112.684418 137.500000
+7358534::: Physics: 7: 112.500000 112.330002 137.500000
+7358769::: Physics: 7: 112.500000 111.973083 137.500000
+7359001::: Physics: 7: 112.500000 111.591263 137.500000
+7359234::: Physics: 7: 112.500000 111.206596 137.500000
+7359465::: Physics: 7: 112.500000 110.864555 137.500000
+7399751::: Frame: 235 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+7399822::: OgreSystem::PositionChanged finished entity: 7
+7460114::: Physics: 7: 112.500000 110.474556 137.500000
+7460361::: Physics: 7: 112.500000 110.058662 137.500000
+7460594::: Physics: 7: 112.500000 109.686050 137.500000
+7460827::: Physics: 7: 112.500000 109.310928 137.500000
+7461107::: Physics: 7: 112.500000 108.909752 137.500000
+7461342::: Physics: 7: 112.500000 108.505745 137.500000
+7499998::: Frame: 241 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+7500069::: OgreSystem::PositionChanged finished entity: 7
+7561994::: Physics: 7: 112.500000 108.122772 137.500000
+7562242::: Physics: 7: 112.500000 107.713264 137.500000
+7562476::: Physics: 7: 112.500000 107.300919 137.500000
+7562729::: Physics: 7: 112.500000 106.885742 137.500000
+7562962::: Physics: 7: 112.500000 106.492249 137.500000
+7563194::: Physics: 7: 112.500000 106.071564 137.500000
+7599950::: Frame: 247 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+7600019::: OgreSystem::PositionChanged finished entity: 7
+7663698::: Physics: 7: 112.500000 105.648041 137.500000
+7663945::: Physics: 7: 112.500000 105.221687 137.500000
+7664179::: Physics: 7: 112.500000 104.817680 137.500000
+7664411::: Physics: 7: 112.500000 104.360489 137.500000
+7664643::: Physics: 7: 112.500000 103.951134 137.500000
+7664875::: Physics: 7: 112.500000 103.539276 137.500000
+7700698::: Frame: 253 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+7700784::: OgreSystem::PositionChanged finished entity: 7
+7765697::: Physics: 7: 112.500000 103.099083 137.500000
+7766074::: Physics: 7: 112.500000 102.656052 137.500000
+7766433::: Physics: 7: 112.500000 102.210190 137.500000
+7766804::: Physics: 7: 112.500000 101.787811 137.500000
+7767154::: Physics: 7: 112.500000 101.336441 137.500000
+7767509::: Physics: 7: 112.500000 100.908890 137.500000
+7800678::: Frame: 259 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+7800749::: OgreSystem::PositionChanged finished entity: 7
+7868097::: Physics: 7: 112.500000 100.425201 137.500000
+7868359::: Physics: 7: 112.500000 99.992310 137.500000
+7868598::: Physics: 7: 112.500000 99.529770 137.500000
+7868834::: Physics: 7: 112.500000 99.064392 137.500000
+7869099::: Physics: 7: 112.500000 98.623650 137.500000
+7869334::: Physics: 7: 112.500000 98.152771 137.500000
+7869567::: Physics: 7: 112.500000 97.679054 137.500000
+7916987::: Frame: 266 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+7917122::: OgreSystem::PositionChanged finished entity: 7
+7970000::: Physics: 7: 112.500000 97.202515 137.500000
+7970118::: Physics: 7: 112.500000 96.751251 137.500000
+7970225::: Physics: 7: 112.500000 96.269196 137.500000
+7970329::: Physics: 7: 112.500000 95.812759 137.500000
+7970435::: Physics: 7: 112.500000 95.325203 137.500000
+7970541::: Physics: 7: 112.500000 94.863586 137.500000
+8016932::: Frame: 272 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+8016972::: OgreSystem::PositionChanged finished entity: 7
+8071205::: Physics: 7: 112.500000 94.370529 137.500000
+8071462::: Physics: 7: 112.500000 93.874641 137.500000
+8071697::: Physics: 7: 112.500000 93.405174 137.500000
+8071947::: Physics: 7: 112.500000 92.874344 137.500000
+8072180::: Physics: 7: 112.500000 92.369942 137.500000
+8072412::: Physics: 7: 112.500000 91.892471 137.500000
+8101087::: Frame: 277 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+8101148::: OgreSystem::PositionChanged finished entity: 7
+8173160::: Physics: 7: 112.500000 91.382568 137.500000
+8173419::: Physics: 7: 112.500000 90.869835 137.500000
+8173655::: Physics: 7: 112.500000 90.384514 137.500000
+8173889::: Physics: 7: 112.500000 89.835861 137.500000
+8174121::: Physics: 7: 112.500000 89.345200 137.500000
+8174367::: Physics: 7: 112.500000 88.852028 137.500000
+8201609::: Frame: 283 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+8201680::: OgreSystem::PositionChanged finished entity: 7
+8275067::: Physics: 7: 112.500000 88.325455 137.500000
+8275324::: Physics: 7: 112.500000 87.796043 137.500000
+8275560::: Physics: 7: 112.500000 87.295021 137.500000
+8275794::: Physics: 7: 112.500000 86.728714 137.500000
+8276026::: Physics: 7: 112.500000 86.190796 137.500000
+8276271::: Physics: 7: 112.500000 85.650047 137.500000
+8301136::: Frame: 289 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+8301203::: OgreSystem::PositionChanged finished entity: 7
+8376975::: Physics: 7: 112.500000 85.138351 137.500000
+8377287::: Physics: 7: 112.500000 84.592094 137.500000
+8377523::: Physics: 7: 112.500000 84.043007 137.500000
+8377757::: Physics: 7: 112.500000 83.491081 137.500000
+8377991::: Physics: 7: 112.500000 83.001404 137.500000
+8378224::: Physics: 7: 112.500000 82.444138 137.500000
+8402221::: Frame: 295 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+8402290::: OgreSystem::PositionChanged finished entity: 7
+8478754::: Physics: 7: 112.500000 81.916908 137.500000
+8479009::: Physics: 7: 112.500000 81.321114 137.500000
+8479244::: Physics: 7: 112.500000 80.788536 137.500000
+8479478::: Physics: 7: 112.500000 80.220100 137.500000
+8479710::: Physics: 7: 112.500000 79.682350 137.500000
+8479972::: Physics: 7: 112.500000 79.108414 137.500000
+8501646::: Frame: 301 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+8501708::: OgreSystem::PositionChanged finished entity: 7
+8580447::: Physics: 7: 112.500000 78.565491 137.500000
+8580703::: Physics: 7: 112.500000 77.986038 137.500000
+8580938::: Physics: 7: 112.500000 77.403763 137.500000
+8581224::: Physics: 7: 112.500000 76.818649 137.500000
+8581458::: Physics: 7: 112.500000 76.230705 137.500000
+8581690::: Physics: 7: 112.500000 75.674591 137.500000
+8602204::: Frame: 307 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+8602273::: OgreSystem::PositionChanged finished entity: 7
+8682017::: Physics: 7: 112.500000 75.081139 137.500000
+8682129::: Physics: 7: 112.500000 74.484856 137.500000
+8682233::: Physics: 7: 112.500000 73.920883 137.500000
+8682336::: Physics: 7: 112.500000 73.319099 137.500000
+8682439::: Physics: 7: 112.500000 72.714478 137.500000
+8682542::: Physics: 7: 112.500000 72.142662 137.500000
+8718160::: Frame: 314 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+8718183::: OgreSystem::PositionChanged finished entity: 7
+8783182::: Physics: 7: 112.500000 71.568336 137.500000
+8783435::: Physics: 7: 112.500000 70.955536 137.500000
+8783670::: Physics: 7: 112.500000 70.339905 137.500000
+8783903::: Physics: 7: 112.500000 69.757736 137.500000
+8784136::: Physics: 7: 112.500000 69.136604 137.500000
+8784368::: Physics: 7: 112.500000 68.512634 137.500000
+8803265::: Frame: 319 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+8803351::: OgreSystem::PositionChanged finished entity: 7
+8885241::: Physics: 7: 112.500000 67.885826 137.500000
+8885634::: Physics: 7: 112.500000 67.219231 137.500000
+8886005::: Physics: 7: 112.500000 66.623711 137.500000
+8886358::: Physics: 7: 112.500000 65.988403 137.500000
+8886716::: Physics: 7: 112.500000 65.387711 137.500000
+8887053::: Physics: 7: 112.500000 64.746902 137.500000
+8902734::: Frame: 325 num of entities: 1 time from last frame 0.016000 time from last event 0.015000
+8902798::: OgreSystem::PositionChanged finished entity: 7
+8987605::: Physics: 7: 112.500000 64.103249 137.500000
+8987870::: Physics: 7: 112.500000 63.494701 137.500000
+8988107::: Physics: 7: 112.500000 62.845551 137.500000
+8988342::: Physics: 7: 112.500000 62.193569 137.500000
+8988585::: Physics: 7: 112.500000 61.538750 137.500000
+8988824::: Physics: 7: 112.500000 60.919682 137.500000
+9002501::: Frame: 331 num of entities: 1 time from last frame 0.013000 time from last event 0.013000
+9002538::: OgreSystem::PositionChanged finished entity: 7
+9089386::: Physics: 7: 112.500000 60.143112 137.500000
+9089649::: Physics: 7: 112.500000 59.635117 137.500000
+9089886::: Physics: 7: 112.500000 58.969288 137.500000
+9090122::: Physics: 7: 112.500000 58.300629 137.500000
+9090357::: Physics: 7: 112.500000 57.668537 137.500000
+9090592::: Physics: 7: 112.500000 56.994370 137.500000
+9090844::: Physics: 7: 112.500000 56.317371 137.500000
+9103937::: Frame: 337 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+9104030::: OgreSystem::PositionChanged finished entity: 7
+9191394::: Physics: 7: 112.500000 55.637539 137.500000
+9191654::: Physics: 7: 112.500000 54.994926 137.500000
+9191889::: Physics: 7: 112.500000 54.309586 137.500000
+9192122::: Physics: 7: 112.500000 53.621414 137.500000
+9192354::: Physics: 7: 112.500000 52.930408 137.500000
+9192586::: Physics: 7: 112.500000 52.236565 137.500000
+9203455::: Frame: 343 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+9203525::: OgreSystem::PositionChanged finished entity: 7
+9293342::: Physics: 7: 112.500000 51.580765 137.500000
+9293603::: Physics: 7: 112.500000 50.881420 137.500000
+9293837::: Physics: 7: 112.500000 50.179241 137.500000
+9294070::: Physics: 7: 112.500000 49.474228 137.500000
+9294307::: Physics: 7: 112.500000 48.766380 137.500000
+9294542::: Physics: 7: 112.500000 48.055698 137.500000
+9304400::: Frame: 349 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+9304486::: OgreSystem::PositionChanged finished entity: 7
+9395240::: Physics: 7: 112.500000 47.342182 137.500000
+9395502::: Physics: 7: 112.500000 46.667854 137.500000
+9395739::: Physics: 7: 112.500000 45.948833 137.500000
+9395974::: Physics: 7: 112.500000 45.311672 137.500000
+9396208::: Physics: 7: 112.500000 44.587315 137.500000
+9396442::: Physics: 7: 112.500000 43.860119 137.500000
+9403851::: Frame: 355 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+9403920::: OgreSystem::PositionChanged finished entity: 7
+9497172::: Physics: 7: 112.500000 43.172928 137.500000
+9497432::: Physics: 7: 112.500000 42.440228 137.500000
+9497667::: Physics: 7: 112.500000 41.747856 137.500000
+9497900::: Physics: 7: 112.500000 40.966328 137.500000
+9498132::: Physics: 7: 112.500000 40.268616 137.500000
+9498364::: Physics: 7: 112.500000 39.524742 137.500000
+9504825::: Frame: 361 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+9504902::: OgreSystem::PositionChanged finished entity: 7
+9599114::: Physics: 7: 112.500000 38.778038 137.500000
+9599420::: Physics: 7: 112.500000 38.072475 137.500000
+9599700::: Physics: 7: 112.500000 37.320263 137.500000
+9599974::: Physics: 7: 112.500000 36.565220 137.500000
+9600254::: Physics: 7: 112.500000 35.851814 137.500000
+9600487::: Physics: 7: 112.500000 35.046627 137.500000
+9604277::: Frame: 367 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+9604344::: OgreSystem::PositionChanged finished entity: 7
+9700993::: Physics: 7: 112.500000 34.327881 137.500000
+9701231::: Physics: 7: 112.500000 33.561661 137.500000
+9701375::: Physics: 7: 112.500000 32.837738 137.500000
+9701511::: Physics: 7: 112.500000 32.066017 137.500000
+9701646::: Physics: 7: 112.500000 31.291460 137.500000
+9701780::: Physics: 7: 112.500000 30.514071 137.500000
+9704195::: Frame: 373 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+9704231::: OgreSystem::PositionChanged finished entity: 7
+9802064::: Physics: 7: 112.500000 29.779627 137.500000
+9802176::: Physics: 7: 112.500000 29.042675 137.500000
+9802280::: Physics: 7: 112.500000 28.257111 137.500000
+9802383::: Physics: 7: 112.500000 27.468710 137.500000
+9802486::: Physics: 7: 112.500000 26.677477 137.500000
+9802589::: Physics: 7: 112.500000 25.930008 137.500000
+9804067::: Frame: 379 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+9804091::: OgreSystem::PositionChanged finished entity: 7
+9903101::: Physics: 7: 112.500000 25.133270 137.500000
+9903252::: Physics: 7: 112.500000 24.380623 137.500000
+9903389::: Physics: 7: 112.500000 23.578381 137.500000
+9903524::: Physics: 7: 112.500000 22.773304 137.500000
+9903659::: Physics: 7: 112.500000 21.965393 137.500000
+9903813::: Physics: 7: 112.500000 21.154648 137.500000
+9904699::: Frame: 385 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+9904732::: OgreSystem::PositionChanged finished entity: 7
+10004216::: Physics: 7: 112.500000 20.388813 137.500000
+10004384::: Physics: 7: 112.500000 19.572563 137.500000
+10004526::: Physics: 7: 112.500000 18.753479 137.500000
+10004664::: Physics: 7: 112.500000 17.979795 137.500000
+10004801::: Physics: 7: 112.500000 17.155209 137.500000
+10004937::: Physics: 7: 112.500000 16.327785 137.500000
+10021180::: Frame: 392 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+10021207::: OgreSystem::PositionChanged finished entity: 7
+10105335::: Physics: 7: 112.500000 15.546255 137.500000
+10105494::: Physics: 7: 112.500000 14.713328 137.500000
+10105634::: Physics: 7: 112.500000 13.877568 137.500000
+10105772::: Physics: 7: 112.500000 13.088187 137.500000
+10105909::: Physics: 7: 112.500000 12.197546 137.500000
+10105945::: Frame: 397 num of entities: 1 time from last frame 0.018000 time from last event 0.018000
+10105979::: OgreSystem::PositionChanged finished entity: 7
+10106046::: Physics: 7: 112.500000 11.402824 137.500000
+10206356::: Physics: 7: 112.500000 10.506187 137.500000
+10206499::: Physics: 7: 112.500000 9.755993 137.500000
+10206634::: Physics: 7: 112.500000 8.903555 137.500000
+10206770::: Physics: 7: 112.500000 8.048285 137.500000
+10206904::: Physics: 7: 112.500000 7.190178 137.500000
+10207039::: Physics: 7: 112.500000 6.379761 137.500000
+10207173::: Physics: 7: 112.500000 5.516151 137.500000
+10221934::: Frame: 404 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+10221974::: OgreSystem::PositionChanged finished entity: 7
+10305863::: Frame: 409 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+10305901::: OgreSystem::PositionChanged finished entity: 7
+10307469::: Physics: 7: 112.500000 4.700556 137.500000
+10307610::: Physics: 7: 112.500000 3.780429 137.500000
+10307755::: Physics: 7: 112.500000 2.857141 137.500000
+10307892::: Physics: 7: 112.500000 2.033371 137.500000
+10308030::: Physics: 7: 112.500000 1.155591 137.500000
+10308168::: Physics: 7: 112.500000 0.326643 137.500000
+10406304::: Frame: 415 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+10406374::: OgreSystem::PositionChanged finished entity: 7
+10408689::: Physics: 7: 112.420738 -0.154813 137.500000
+10408952::: Physics: 7: 112.462425 0.098559 137.630432
+10409230::: Physics: 7: 112.465546 -0.017216 137.698502
+10409478::: Physics: 7: 112.521858 0.169872 137.785400
+10409724::: Physics: 7: 112.549347 0.353034 137.904633
+10409963::: Physics: 7: 112.579674 0.399791 138.008499
+10506764::: Frame: 421 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+10506836::: OgreSystem::PositionChanged finished entity: 7
+10510501::: Physics: 7: 112.580040 0.660676 138.104416
+10510754::: Physics: 7: 112.594864 0.770531 138.213226
+10510996::: Physics: 7: 112.608055 0.837899 138.309891
+10511239::: Physics: 7: 112.619980 0.925954 138.403015
+10511489::: Physics: 7: 112.631554 1.117593 138.483017
+10511760::: Physics: 7: 112.641251 1.483273 138.559891
+10607033::: Frame: 427 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+10607103::: OgreSystem::PositionChanged finished entity: 7
+10612274::: Physics: 7: 112.649643 1.570183 138.632050
+10612529::: Physics: 7: 112.659500 1.585472 138.711304
+10612773::: Physics: 7: 112.669373 1.596537 138.790405
+10613080::: Physics: 7: 112.679398 1.611905 138.867722
+10613329::: Physics: 7: 112.689400 1.618299 138.944855
+10613570::: Physics: 7: 112.699387 1.620589 139.022308
+10707211::: Frame: 433 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+10707281::: OgreSystem::PositionChanged finished entity: 7
+10714046::: Physics: 7: 112.708786 1.620342 139.095108
+10714306::: Physics: 7: 112.718773 1.617963 139.172348
+10714556::: Physics: 7: 112.728165 1.616895 139.244064
+10714796::: Physics: 7: 112.738167 1.611848 139.320602
+10715041::: Physics: 7: 112.748230 1.608303 139.396042
+10715281::: Physics: 7: 112.758263 1.600592 139.471832
+10815609::: Physics: 7: 112.767715 1.592221 139.542755
+10815726::: Physics: 7: 112.777794 1.582842 139.617584
+10815834::: Physics: 7: 112.787270 1.570699 139.688141
+10815941::: Physics: 7: 112.797935 1.556302 139.767075
+10816048::: Physics: 7: 112.806862 1.543451 139.832291
+10816154::: Physics: 7: 112.816490 1.536619 139.903778
+10822869::: Frame: 440 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+10822891::: OgreSystem::PositionChanged finished entity: 7
+10916695::: Physics: 7: 112.824539 1.540129 139.970200
+10916885::: Physics: 7: 112.833572 1.535282 140.041580
+10917162::: Physics: 7: 112.845329 1.533699 140.134415
+10917309::: Physics: 7: 112.854561 1.540257 140.201859
+10917387::: Physics: 7: 112.859962 1.537880 140.241684
+10917528::: Physics: 7: 112.869164 1.537645 140.309158
+10924054::: Frame: 446 num of entities: 1 time from last frame 0.018000 time from last event 0.018000
+10924119::: OgreSystem::PositionChanged finished entity: 7
+11018025::: Physics: 7: 112.878662 1.539441 140.379166
+11018133::: Physics: 7: 112.887024 1.532508 140.441147
+11018235::: Physics: 7: 112.894867 1.529017 140.505722
+11018338::: Physics: 7: 112.902519 1.533395 140.565521
+11018443::: Physics: 7: 112.911201 1.546917 140.626526
+11018547::: Physics: 7: 112.919212 1.550692 140.685135
+11023346::: Frame: 452 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+11023368::: OgreSystem::PositionChanged finished entity: 7
+11107706::: Frame: 457 num of entities: 1 time from last frame 0.016000 time from last event 0.014000
+11107776::: OgreSystem::PositionChanged finished entity: 7
+11119145::: Physics: 7: 112.927818 1.547968 140.746597
+11119402::: Physics: 7: 112.936195 1.545517 140.807190
+11119645::: Physics: 7: 112.944130 1.538921 140.864639
+11119890::: Physics: 7: 112.951935 1.537437 140.927490
+11120135::: Physics: 7: 112.959625 1.540688 140.986435
+11120385::: Physics: 7: 112.966904 1.553060 141.037521
+11220911::: Physics: 7: 112.974648 1.554222 141.094055
+11221079::: Physics: 7: 112.981949 1.552615 141.147232
+11221220::: Physics: 7: 112.989716 1.548758 141.203644
+11221362::: Physics: 7: 112.996628 1.557439 141.256485
+11221501::: Physics: 7: 113.003853 1.556737 141.310852
+11221642::: Physics: 7: 113.010559 1.555178 141.361557
+11224039::: Frame: 464 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+11224078::: OgreSystem::PositionChanged finished entity: 7
+11308751::: Frame: 469 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+11308823::: OgreSystem::PositionChanged finished entity: 7
+11322270::: Physics: 7: 113.017342 1.560545 141.413010
+11322530::: Physics: 7: 113.024170 1.562927 141.464523
+11322776::: Physics: 7: 113.031456 1.561059 141.519440
+11323019::: Physics: 7: 113.037926 1.556804 141.568130
+11323274::: Physics: 7: 113.044891 1.553908 141.618835
+11323522::: Physics: 7: 113.051460 1.561413 141.666077
+11408983::: Frame: 475 num of entities: 1 time from last frame 0.016000 time from last event 0.015000
+11409085::: OgreSystem::PositionChanged finished entity: 7
+11424034::: Physics: 7: 113.057549 1.561072 141.711807
+11424292::: Physics: 7: 113.063675 1.557691 141.757660
+11424542::: Physics: 7: 113.069847 1.562798 141.803757
+11424795::: Physics: 7: 113.075676 1.564035 141.847275
+11425092::: Physics: 7: 113.082291 1.561398 141.896591
+11425343::: Physics: 7: 113.088219 1.558829 141.939728
+11509259::: Frame: 481 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+11509331::: OgreSystem::PositionChanged finished entity: 7
+11525836::: Physics: 7: 113.094566 1.563894 141.985443
+11526119::: Physics: 7: 113.099785 1.564829 142.023666
+11526366::: Physics: 7: 113.105705 1.561839 142.067490
+11526614::: Physics: 7: 113.111534 1.558115 142.110809
+11526865::: Physics: 7: 113.116570 1.563692 142.148590
+11527111::: Physics: 7: 113.122246 1.565882 142.191528
+11609214::: Frame: 487 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+11609284::: OgreSystem::PositionChanged finished entity: 7
+11627714::: Physics: 7: 113.130241 1.559645 142.251602
+11627979::: Physics: 7: 113.136108 1.556299 142.293991
+11628229::: Physics: 7: 113.138519 1.560306 142.310806
+11628378::: Physics: 7: 113.142921 1.562199 142.342255
+11628625::: Physics: 7: 113.148300 1.563780 142.381622
+11628865::: Physics: 7: 113.153397 1.561013 142.419083
+11629158::: Physics: 7: 113.158104 1.557601 142.453857
+11709471::: Frame: 493 num of entities: 1 time from last frame 0.017000 time from last event 0.017000
+11709541::: OgreSystem::PositionChanged finished entity: 7
+11729705::: Physics: 7: 113.162354 1.563188 142.485764
+11729972::: Physics: 7: 113.166855 1.565267 142.520035
+11730225::: Physics: 7: 113.171494 1.563849 142.554459
+11730470::: Physics: 7: 113.176102 1.559592 142.588867
+11730713::: Physics: 7: 113.180695 1.553002 142.623169
+11730957::: Physics: 7: 113.184723 1.561903 142.650986
+11809688::: Frame: 499 num of entities: 1 time from last frame 0.016000 time from last event 0.016000
+11809758::: OgreSystem::PositionChanged finished entity: 7
+11831578::: Physics: 7: 113.188965 1.563408 142.681900
+11831849::: Physics: 7: 113.193344 1.564603 142.712189
+11832099::: Physics: 7: 113.197281 1.565484 142.740067
+11832424::: Physics: 7: 113.201843 1.559979 142.771729
+11832585::: Physics: 7: 113.205887 1.556850 142.799957
+11832827::: Physics: 7: 113.209312 1.563724 142.826340
+11909565::: Frame: 505 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+11909636::: OgreSystem::PositionChanged finished entity: 7
+11933497::: Physics: 7: 113.212898 1.562711 142.853226
+11933662::: Physics: 7: 113.216377 1.562105 142.879059
+11933913::: Physics: 7: 113.219849 1.565325 142.904297
+11934161::: Physics: 7: 113.223083 1.566071 142.927872
+11934410::: Physics: 7: 113.226425 1.566720 142.952332
+11934654::: Physics: 7: 113.229652 1.567237 142.976135
+12010160::: Frame: 511 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+12010229::: OgreSystem::PositionChanged finished entity: 7
+12035310::: Physics: 7: 113.232666 1.567615 142.997864
+12035572::: Physics: 7: 113.235939 1.564246 143.021271
+12035820::: Physics: 7: 113.239052 1.561448 143.043839
+12036067::: Physics: 7: 113.241608 1.565781 143.062576
+12036415::: Physics: 7: 113.244469 1.566362 143.083511
+12036565::: Physics: 7: 113.247070 1.567060 143.102600
+12110331::: Frame: 517 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+12110401::: OgreSystem::PositionChanged finished entity: 7
+12137285::: Physics: 7: 113.249435 1.567474 143.120438
+12137555::: Physics: 7: 113.252022 1.567837 143.138794
+12137811::: Physics: 7: 113.254440 1.567984 143.156540
+12138147::: Physics: 7: 113.256783 1.566085 143.173401
+12138391::: Physics: 7: 113.258949 1.566771 143.189667
+12138541::: Physics: 7: 113.260994 1.567370 143.205002
+12210250::: Frame: 523 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+12210320::: OgreSystem::PositionChanged finished entity: 7
+12239330::: Physics: 7: 113.262825 1.567652 143.219421
+12239498::: Physics: 7: 113.264664 1.568035 143.233582
+12239748::: Physics: 7: 113.266449 1.568282 143.247360
+12240087::: Physics: 7: 113.268120 1.566867 143.260193
+12240344::: Physics: 7: 113.269760 1.567352 143.272537
+12240512::: Physics: 7: 113.271309 1.567812 143.284164
+12311323::: Frame: 529 num of entities: 1 time from last frame 0.018000 time from last event 0.017000
+12311399::: OgreSystem::PositionChanged finished entity: 7
+12341378::: Physics: 7: 113.272751 1.568045 143.295242
+12341642::: ControllerSystem::mousePressed
+12341685::: Physics: 7: 113.274033 1.568274 143.304962
+12341693::: ControllerSystem::mouseReleased
+12341942::: Physics: 7: 113.275314 1.568470 143.314621
+12342190::: Physics: 7: 113.276505 1.568627 143.323608
+12342434::: Physics: 7: 113.277649 1.568760 143.332397
+12342707::: Physics: 7: 113.278603 1.568851 143.339508
+12410690::: Frame: 535 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+12410759::: OgreSystem::PositionChanged finished entity: 7
+12443270::: Physics: 7: 113.279411 1.568921 143.345596
+12443539::: Physics: 7: 113.280258 1.568986 143.351883
+12443791::: Physics: 7: 113.281013 1.569037 143.357498
+12444041::: Physics: 7: 113.281631 1.569076 143.362106
+12444292::: Physics: 7: 113.282196 1.569109 143.366364
+12444539::: Physics: 7: 113.282784 1.567083 143.370438
+12501647::: before
+12501686::: 
+
+12510785::: Frame: 541 num of entities: 1 time from last frame 0.017000 time from last event 0.016000
+12510802::: OgreSystem::castRay ray origin: Vector3(296.354, 298.202, 496.991) direction: Vector3(-0.720873, -0.355536, -0.594925) 
+12510847::: OgreSystem::PositionChanged finished entity: 7
+12512126::: after
+12512160::: 
+
+12514261::: after2
+12514295::: 
+
+12526309::: EntitySystem::createScene found 1 Scenes
+12526396::: Creating components for 9
+12526524::: Creating EntityWorldComponent for 9 3
+12544862::: Physics: 7: 113.282890 1.567611 143.373077
+12544977::: Physics: 7: 113.283058 1.567945 143.375275
+12545110::: Physics: 7: 113.283134 1.568209 143.376877
+12545219::: Physics: 7: 113.283371 1.568406 143.378021
+12611877::: OgreSystem::createComponent entity 9 using EntityWorldComponent 3
+12627272::: Frame: 548 num of entities: 1 time from last frame 0.016000 time from last event 0.014000
+12627307::: OgreSystem::PositionChanged finished entity: 7
+12645774::: Physics: 7: 113.283737 1.568899 143.378830
+12646517::: PhysicsSystem::createComponent entity 9 using EntityWorldComponent 3
+12646986::: Physics: 9: 296.353882 298.198853 496.990906
+12647139::: Physics: 9: 296.353882 298.193115 496.990906
+12728112::: Frame: 554 num of entities: 2 time from last frame 0.017000 time from last event 0.017000
+12728184::: OgreSystem::PositionChanged finished entity: 7
+12728232::: OgreSystem::PositionChanged finished entity: 9
+12747656::: Physics: 9: 296.353882 298.185028 496.990906
+12747938::: Physics: 9: 296.353882 298.173828 496.990906
+12748204::: Physics: 9: 296.353882 298.159760 496.990906
+12748473::: Physics: 9: 296.353882 298.142853 496.990906
+12748737::: Physics: 9: 296.353882 298.123138 496.990906
+12749022::: Physics: 9: 296.353882 298.101898 496.990906
+12849495::: Physics: 9: 296.353882 298.076660 496.990906
+12849621::: Physics: 9: 296.353882 298.048584 496.990906
+12849737::: Physics: 9: 296.353882 298.019470 496.990906

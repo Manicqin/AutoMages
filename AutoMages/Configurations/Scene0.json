@@ -1,0 +1,50 @@
+{
+	"Scene":
+	[
+	{
+		"type": "RadiusSceneCreator",
+		"ItemNum": 200,
+		"Radius": 500,
+		"x":0,
+		"y":100,
+		"z":0,
+		"Name":"Radius1"
+	},
+	{
+		"type": "RadiusSceneCreator",
+		"ItemNum": 300,
+		"Radius": 250,
+		"x":0,
+		"y":500,
+		"z":0,
+		"Name":"Radius2"
+	},
+	{
+		"type": "ScriptSceneCreator",
+		"ScriptFile": "Scripts/TestCode.cd"	
+	}
+	,
+        {
+            "exType":"StaticObjects_t"
+            "exOverride":[
+                {
+                    "name":"static1",
+                }
+            ]
+        },
+        {
+            "exType":"StaticObjects_t",
+            "exOverride":[
+                {
+                    "name":"static2",
+                    "orientation.roll":"-45",
+                    "startPosition.x":"-2000",
+                    "startPosition.y":"200"
+                }
+            ]
+        }
+	]	
+}
+
+
+	

@@ -1,0 +1,41 @@
+import SystemsExports;
+import MessagesExports;
+import random
+from xml.etree import ElementTree
+from xml.etree.ElementTree import SubElement
+import time
+
+from entities import *;
+
+
+def createEntity():
+    cmpntSysId  = SystemsExports.getSystemIdByName("ComponentsSystem")
+    sceneXml = ElementTree.Element("Scene")
+    for count in cubeRandomizer((100,200,200),edgeLength =  120,itemsCount = 400):
+        sceneXml = Entity([
+                                EntityWorldComponent(newPosition = wrapVector3(count)),
+                                PhysicsComponent(newMass = 10),
+                                RenderComponent(newMesh = "fish.mesh")
+                            ]).serialize(sceneXml)
+    if(cmpntSysId):
+
+	data = ElementTree.tostring(sceneXml)
+	print data
+        initMsg = MessagesExports.CreateSceneMsg.createFromData(data)
+
+        SystemsExports.getSystemChannelIn(cmpntSysId).addMsg(initMsg.createSharedPtr());
+
+def createEntityInPlace(x , y , z):
+    cmpntSysId  = SystemsExports.getSystemIdByName("ComponentsSystem")
+    sceneXml = ElementTree.Element("Scene")
+
+    sceneXml = Entity([
+                            EntityWorldComponent(newPosition = Vector3(x,y,z)),
+                            PhysicsComponent(newMass = 10),
+                            RenderComponent(newMesh = "fish.mesh")
+                        ]).serialize(sceneXml)
+    if(cmpntSysId):
+	data = ElementTree.tostring(sceneXml)
+	#print data
+        initMsg = MessagesExports.CreateSceneMsg.createFromData(data)
+        SystemsExports.getSystemChannelIn(cmpntSysId).addMsg(initMsg.createSharedPtr());

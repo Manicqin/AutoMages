@@ -1,0 +1,262 @@
+/*
+ * SystemBase.cpp
+ *
+ *  Created on: Sep 22, 2012
+ *      Author: manicqin
+ */
+
+#include "SystemBase.h"
+#include "../EntityComponents/AllComponents.h"
+#include "../EntityComponents/AllMessages.h"
+#include "../EntityComponents/Entity.h"
+#include <boost/property_tree/xml_parser.hpp>
+#include <boost/property_tree/detail/rapidxml.hpp>
+#include <log4cxx/logger.h>
+
+namespace Systems {
+//boost::thread_group	SystemBase::mGlobalThreadGroup;
+SystemBase::SystemBase():mOperations(this)
+						,mLoopSystem(true)
+						,mWaitTimeMilliSec(100)
+						,mReadMsgAmount(10)
+						,mSystemId(0)
+						,mSystemPriority(0)
+						,mSystemEntityId(EntityComponent::EntityRegistry::getSingleton().createEntity()){
+
+//	mWorkerThread = boost::thread(&SystemBase::ReadQueue,this);
+//	mGlobalThreadGroup.add_thread(&mWorkerThread);
+
+    getOperations().CASE_FUNC(CreateComponentMsg,SystemBase::createComponentBase)
+        .CASE_FUNC(InitSystemMsg,SystemBase::initSystemBase)
+        .CASE_FUNC(ShutDownSystemMsg,SystemBase::shutDownSystemBase)
+        .CASE_FUNC(StartSystemMsg,SystemBase::startSystemBase)
+        .case_<SystemKillMsg>([&](MsgSwitch::caseOperationArg const& val,Systems::ChannelHandler out)
+				{
+					setLoopSystem(false);
+					return MsgSwitch::caseOperationRet();
+				})
+        .case_<ChanneledMessages>([&](MsgSwitch::caseOperationArg const& val,Systems::ChannelHandler out)
+				{
+					auto msg = CAST_MSG_TO_TYPE(ChanneledMessages,val);
+					//std::cout << val.use_count() << " " << msg.use_count() << "" << msg->getMessageType() << std::endl;
+					execute(msg->getWrapped(),msg->getBackChannel());
+					//std::cout << val.use_count() << " " << msg.use_count() << "" << msg->getMessageType() << std::endl;
+					return MsgSwitch::caseOperationRet();
+				})
+        .case_<ListMsg>([&](MsgSwitch::caseOperationArg const& val,Systems::ChannelHandler out)
+						{
+							auto msg = CAST_MSG_TO_TYPE(ListMsg,val);
+							auto messagesList = msg->getData();
+							for(auto iter = std::begin(messagesList);iter != std::end(messagesList);++iter)
+							{
+								execute(*iter);
+							}
+
+							return MsgSwitch::caseOperationRet();
+						})
+        .case_<genMsg>(	[&](MsgSwitch::caseOperationArg const& val,Systems::ChannelHandler out)
+				{
+					auto msg = CAST_MSG_TO_TYPE(genMsg,val);
+
+					msg->getData()();
+					return MsgSwitch::caseOperationRet();
+				})
+	/*	.case_<NotevMsg>([&](MsgSwitch::caseOperationArg const& val)
+				{
+					auto msg = CAST_MSG_TO_TYPE(NotevMsg,val);
+
+					msg->printMsg(SystemsRegistry::getItemName(this->getSystemId()));
+					return MsgSwitch::caseOperationRet();
+				})
+	*/	.default_(
+                [&](MsgSwitch::caseOperationArg const& val,Systems::ChannelHandler out)
+				{
+					LOG4CXX_INFO(log4cxx::Logger::getLogger("ViewerMain") , "System " << SystemsRegistry::getItemName(this->getSystemId()) << " got an unsubscribed message: "<< MessagesRegistry::getItemName(val->getMessageType()));
+					return MsgSwitch::caseOperationRet();
+				});
+
+
+}
+
+SystemBase::~SystemBase() {
+	// TODO Auto-generated destructor stub
+}
+
+msgSwitch SystemBase::execute(const MsgSwitch::caseOperationArg incomingMsg,
+		ChannelHandler outChannel)
+{
+    auto retVal = mOperations(incomingMsg,outChannel);
+    switch (retVal)
+	{
+
+		case msgSwitch::returnRecycle:
+		{
+            getChannelIn().addMsg(incomingMsg);
+			break;
+		}
+
+		default:
+		{
+			break;
+		}
+	};
+    return retVal;
+}
+
+void SystemBase::ReadQueue() {
+	try{
+		while(isLoopSystem()){
+
+			if(mChannelIn.isChannelOpen())
+			{
+				if(mReadMsgAmount > 1 )
+				{
+					std::vector<MsgSwitch::caseOperationArg >	tmp;
+					tmp.reserve(mReadMsgAmount);
+					if(mChannelIn.getAllMsgs(tmp))
+					{
+						std::for_each(std::begin(tmp),std::end(tmp),[&](MsgSwitch::caseOperationArg const& val){
+							execute(val,mChannelOut);
+						});
+					}
+				}
+				else
+				{
+					MsgSwitch::caseOperationArg	tmp = CASE_OPERATION_ARG_DEF_VAL;
+					if(mChannelIn.getMsg(tmp))
+					{
+						execute(tmp,mChannelOut);
+					}
+				}
+			}
+
+			if(!mWaitTimeMilliSec)
+				boost::this_thread::yield();
+			else
+				boost::this_thread::sleep(boost::posix_time::milliseconds(mWaitTimeMilliSec));
+		}
+	}
+	catch(...)
+	{
+
+		std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " has crushed, fuck you"<<std::endl;
+	}
+
+}
+
+DEFINE_CASE_IMP(SystemBase::createComponentBase)
+{
+    auto retVal = createComponent(val,out);
+
+    return retVal;
+}
+DEFINE_CASE_IMP(SystemBase::startSystemBase)
+{
+	//std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " calling startSystem"<<std::endl;
+	auto retVal = startSystem(val);
+//	std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " finished startSystem"<<std::endl;
+	return retVal;
+}
+
+DEFINE_CASE_IMP(SystemBase::initSystemBase)
+{
+	//std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " calling initSystem"<<std::endl;
+
+	auto msg = CAST_MSG_TO_TYPE(InitSystemMsg,val);
+	auto propertyTree = msg->getData();
+	//ReadMsgAmount
+
+	if( propertyTree->first_node()->first_node("SystemBase"))
+	{
+		auto sysConfig = propertyTree->first_node()->first_node("SystemBase");
+
+		auto optReadMsg = sysConfig->first_attribute("ReadMsgAmount");
+		if(optReadMsg)
+			setReadMsgAmount(boost::lexical_cast<int>(optReadMsg->value()));
+
+		optReadMsg = sysConfig->first_attribute("SystemPriority");
+		if(optReadMsg)
+			setSystemPriority(boost::lexical_cast<int>(optReadMsg->value()));
+
+		optReadMsg = sysConfig->first_attribute("WaitTimeMilliSec");
+		if(optReadMsg)
+			setWaitTimeMilliSec(boost::lexical_cast<int>(optReadMsg->value()));
+	}
+	if( propertyTree->first_node()->first_node("Entity"))
+	{
+		auto sysConfig = propertyTree->first_node();
+
+		auto createEntityMsg =	MAKE_SHARED_MSG_TYPE<CreateEntityMsg>(std::shared_ptr<rapidxml::xml_node<>>(propertyTree,sysConfig));
+		createEntityMsg->setEntityId(getSystemEntityId());
+
+		sendMsg(createEntityMsg);
+	}
+
+	auto retVal = initSystem(val);
+	//std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " finished initSystem"<<std::endl;
+	return retVal;
+}
+
+DEFINE_CASE_IMP(SystemBase::shutDownSystemBase)
+{
+//	std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " calling shutDownSystem"<<std::endl;
+	auto retVal = shutDownSystem(val);
+	//std::cout << "System " << SystemsRegistry::getItemName(this->getSystemId()) << " finished shutDownSystem"<<std::endl;
+	return retVal;
+}
+
+bool	waitOnChannel(ChannelHandler const& chann, std::size_t interval,std::size_t count,std::size_t connections)
+{
+
+	do{
+		boost::this_thread::sleep(boost::posix_time::milliseconds(interval));
+		count--;
+//        LOG4CXX_INFO(log4cxx::Logger::getLogger("ViewerMain"),"waiting on " << chann.getChannelName() << " " <<
+//                chann.numOfInstances() << " " <<
+//                count << " " <<
+//                chann.numOfInstances() - connections)
+	}while(chann.numOfInstances() > connections && count);
+
+	return chann.numOfInstances() == connections;
+}
+
+DEFINE_CASE_IMP(SystemBase::periodicalFunction)
+{
+	return MsgSwitch::caseOperationRet();
+}
+
+
+std::size_t getSystemId_(SystemBase const* sys)
+{
+	//std::cout << sys->getSystemId() << std::endl;
+	return sys->getSystemId();
+}
+
+
+void	sendMsg(MsgSwitch::caseOperationArg	msg)
+{
+	std::size_t msgId = msg->getMessageType();
+	if(msgId == ChanneledMessages::getItemTypeId())
+		msgId = CAST_MSG_TO_TYPE(ChanneledMessages,msg)->getWrapped()->getMessageType();
+
+	auto vecSubs = MessagesRegistry::getSubscribers(msgId);
+
+	std::for_each(std::begin(vecSubs),std::end(vecSubs),[&](std::size_t const val){
+		if(val)
+		{
+			if(SystemsManager::getSingleton().getSystem(val)->getChannelIn().isChannelOpen())
+				SystemsManager::getSingleton().getSystem(val)->getChannelIn().addMsg(msg);
+		}
+		else{
+			SystemsManager::getSingleton().iterarteOver([msg](std::pair<std::size_t,boost::shared_ptr<SystemBase>> const& sys)
+					{
+						if(sys.second->getChannelIn().isChannelOpen())
+							sys.second->getChannelIn().addMsg(msg);
+					});
+		}
+	});
+}
+
+}/* namespace Systems */
+
+

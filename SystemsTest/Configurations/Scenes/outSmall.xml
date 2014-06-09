@@ -1,0 +1,95 @@
+<Scene>
+	<Entity>
+		<Components>
+			<CameraComponent Name="PlayerCam" NearClipDistance="5">
+				<Position x="200" y="100" z="200" />
+				<LookAt x="20" y="2" z="0" />
+			</CameraComponent>
+			<EntityWorldComponent>
+				<Position x="300" y="200" z="200" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<PhysicsComponent Mass="10">
+				<Envelope x="1.00" y="1.00" z="1.00" />
+			</PhysicsComponent>
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="15.30" y="8.39" z="0.96" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="2.78" y="8.39" z="0.96" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.001" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="2.78" y="8.39" z="5.58" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.002" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="15.30" y="8.39" z="5.58" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.003" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="15.30" y="8.39" z="10.13" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.004" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="2.78" y="8.39" z="10.13" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.005" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Position x="2.78" y="8.39" z="24.08" />
+				<Orientation x="0.00" y="0.00" z="0.00" />
+				<Scale x="1.00" y="1.00" z="1.00" />
+			</EntityWorldComponent>
+			<RenderComponent Name ="Cube.006" Mesh ="fish.mesh" />
+			<PhysicsComponent Mass = "10" />
+		</Components>
+	</Entity>
+</Scene>

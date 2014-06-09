@@ -1,0 +1,87 @@
+<OgreSystem>
+<RenderFramesSeparately>0</RenderFramesSeparately>
+<RenderInSameThread>0</RenderInSameThread>
+
+<MillisecondsBetweenFrames>100</MillisecondsBetweenFrames>
+<ShowConfiguration>0</ShowConfiguration>
+
+
+<Meshes><RenderComponent>
+        <Name>Cube.749</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.750</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.751</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.752</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.753</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.754</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.755</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.756</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.757</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.758</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.759</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.760</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.761</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.762</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.763</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.764</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.765</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      <RenderComponent>
+        <Name>Cube.766</Name>
+        <Mesh>CubeColor.mesh</Mesh>
+      </RenderComponent>
+      </Meshes><Cameras><CameraComponent>
+				<Name>PlayerCam</Name>
+				<Position x="200" y="100" z="200" />
+				<LookAt x="20" y="2" z="0" />
+				<NearClipDistance>5</NearClipDistance>
+			</CameraComponent>
+		</Cameras></OgreSystem>

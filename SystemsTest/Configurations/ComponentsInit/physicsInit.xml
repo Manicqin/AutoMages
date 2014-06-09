@@ -1,0 +1,4 @@
+<PhysicsSystem Precision="0.001" MaxSubSteps="5">
+	<SystemBase ReadMsgAmount="10" SystemPriority="2" />
+	<Gravity x = "0" y = "-9.81" z = "0" />
+</PhysicsSystem>

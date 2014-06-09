@@ -1,0 +1,102 @@
+<Scene>
+	
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x = "0" y = "0" z = "0" />
+				<Scale x = "20" y = "20" z = "20" />
+				<Position x = "100" y = "1000" z = "200" />
+			</EntityWorldComponent>
+			<RenderComponent>
+				<Name>testMesh</Name>
+				<Mesh>CubeColor.mesh</Mesh>
+			</RenderComponent>
+			<PhysicsComponent>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+			<LocomotionComponent>
+				<Gravity x = "0" y = "9.81" z = "0" />
+			</LocomotionComponent>
+		</Components>
+	</Entity>
+  
+    <Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x = "0" y = "0" z = "0" />
+				<Scale x = "20" y = "20" z = "20" />
+				<Position x = "100" y = "5000" z = "20" />
+			</EntityWorldComponent>
+			<RenderComponent>
+				<Name>testMesh5</Name>
+				<Mesh>CubeColor.mesh</Mesh>
+			</RenderComponent>
+			<PhysicsComponent>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+			<LocomotionComponent>
+				<Gravity x = "0" y = "9.81" z = "0" />
+			</LocomotionComponent>
+		</Components>
+	</Entity>
+  <Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x = "0" y = "0" z = "0" />
+				<Scale x = "20" y = "20" z = "20" />
+				<Position x = "100" y = "4000" z = "200" />
+			</EntityWorldComponent>
+			<RenderComponent>
+				<Name>testMesh4</Name>
+				<Mesh>CubeColor.mesh</Mesh>
+			</RenderComponent>
+			<PhysicsComponent>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+			<LocomotionComponent>
+				<Gravity x = "0" y = "9.81" z = "0" />
+			</LocomotionComponent>
+		</Components>
+	</Entity>
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x = "0" y = "0" z = "0" />
+				<Scale x = "20" y = "20" z = "20" />
+				<Position x = "100" y = "2000" z = "200" />
+			</EntityWorldComponent>
+			<RenderComponent>
+				<Name>testMesh2</Name>
+				<Mesh>CubeColor.mesh</Mesh>
+			</RenderComponent>
+			<PhysicsComponent>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+			<LocomotionComponent>
+				<Gravity x = "0" y = "9.81" z = "0" />
+			</LocomotionComponent>
+		</Components>
+	</Entity>
+
+	<Entity>
+		<Components>
+			<EntityWorldComponent>
+				<Orientation x = "90" y = "90" z = "0" />
+				<Scale x = "20" y = "20" z = "20" />
+				<Position x = "100" y = "3000" z = "200" />
+			</EntityWorldComponent>
+			<RenderComponent>
+				<Name>testMesh3</Name>
+				<Mesh>CubeColor.mesh</Mesh>
+			</RenderComponent>
+			<PhysicsComponent>
+				<Mass>10</Mass>
+			</PhysicsComponent>
+			<LocomotionComponent>
+				<Gravity x = "0" y = "9.81" z = "0" />
+			</LocomotionComponent>
+		</Components>
+	</Entity>
+
+
+</Scene>

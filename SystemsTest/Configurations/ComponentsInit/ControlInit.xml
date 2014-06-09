@@ -1,0 +1,8 @@
+<ControllerSystem >
+	<SystemBase ReadMsgAmount="100" SystemPriority="2" />
+	<Entity>
+		<Components>
+			<ScriptComponent FileName="keys.py" Class="ControllerSystem"/>
+		</Components>
+	</Entity>
+</ControllerSystem>

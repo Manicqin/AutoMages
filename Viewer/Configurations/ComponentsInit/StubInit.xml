@@ -1,0 +1,8 @@
+<StubSystem>
+	<SystemBase ReadMsgAmount="1" SystemPriority="2" />
+	<Entity>
+		<Components>
+			<ScriptComponent FileName="Controls.py" />
+		</Components>
+	</Entity>
+</StubSystem>

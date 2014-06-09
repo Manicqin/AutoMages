@@ -1,0 +1,236 @@
+//class ChannelWrapper :  public Systems::ThreadSafeChannel
+//{
+//public:
+//	ChannelWrapper(PyObject* self_):Systems::ThreadSafeChannel("ChannelWrapper"),
+//		self(self_)
+//	{
+//		Py_INCREF(self);
+//	}
+//	virtual ~ChannelWrapper()
+//	{
+//		Py_DECREF(self);
+//	}
+//
+//private:
+////	Systems::ChannelHandler::innerChannelType	mChannel;
+//	PyObject *self;
+//};
+//
+//class ChannelHandlerWrapper : public Systems::ChannelHandler
+//{
+//public:
+//	ChannelHandlerWrapper( PyObject* self_) :
+//		Systems::ChannelHandler(boost::make_shared<ChannelWrapper>(self_))
+//	{
+//
+//		std::cout << "cTor " << std::endl;
+//	}
+////	ChannelHandlerWrapper( PyObject* self_,std::string const& channelName) :
+////		Systems::ChannelHandler(boost::make_shared<ChannelWrapper>(self_))
+////
+////	{
+////		//Py_INCREF(self);
+////		std::cout << "cTor2" << channelName + " Wrap " << std::endl;
+////	}
+//	ChannelHandlerWrapper( PyObject* self_, const Systems::ChannelHandler& copy ) :
+//		Systems::ChannelHandler(copy)
+//
+//	{
+//		//Py_INCREF(self_);
+//		std::cout << "copy cTor " << copy.getChannelName() << self_->ob_refcnt << std::endl;
+//	}
+//	virtual ~ChannelHandlerWrapper()
+//	{
+//		//Py_DECREF(self_);
+//		std::cout << "dTor " << getChannelName() << std::endl;
+//
+//	}
+//
+//
+//
+//};
+//struct ChannelWrap : Systems::Channel, boost::python::wrapper<Systems::Channel>
+//{
+//	void addMsg(MsgSwitch::caseOperationArg const &  newMsg)
+//	{
+//		this->get_override("addMsg")(newMsg);
+//	}
+//
+//	bool getMsg(MsgSwitch::caseOperationArg& outMsg)
+//	{
+//		return this->get_override("getMsg")(outMsg);
+//	}
+//
+//	std::size_t hasMsgs()
+//	{
+//		return this->get_override("hasMsgs")();
+//	}
+//
+//	bool getAllMsgs(std::vector<MsgSwitch::caseOperationArg>& vecMessages, std::size_t msgAmount = -1)
+//	{
+//		boost::python::override	f = this->get_override("getAllMsgs");
+//		if(f)
+//			return f(vecMessages,msgAmount);
+//		return Systems::Channel::getAllMsgs(vecMessages,msgAmount);
+//	}
+//
+//	bool def_getAllMsgs(std::vector<MsgSwitch::caseOperationArg>& vecMessages, std::size_t msgAmount = -1)
+//	{
+//		return this->Systems::Channel::getAllMsgs(vecMessages,msgAmount);
+//	}
+//
+//	void addAllMsgs(std::vector<MsgSwitch::caseOperationArg> const & vecMessages)
+//	{
+//		boost::python::override	f = this->get_override("addAllMsgs");
+//		if(f)
+//			f(vecMessages);
+//		else
+//			Systems::Channel::addAllMsgs(vecMessages);
+//	}
+//
+//	void def_addAllMsgs(std::vector<MsgSwitch::caseOperationArg> const & vecMessages)
+//	{
+//		this->Systems::Channel::addAllMsgs(vecMessages);
+//	}
+//};
+
+//class BaseComponentWrap : public BaseComponent , public wrapper<BaseComponent>
+//{
+//public:
+//	std::string ComponentName() const
+//	{
+//		if(override name = this->get_override("ComponentName"))
+//			return ComponentName();
+//		return BaseComponent::ComponentName();
+//	}
+//
+//	std::string default_ComponentName() const { return this->BaseComponent::ComponentName(); }
+//
+//	void ComponentHandleMessage(const Messages& msg)
+//	{
+//		this->get_override("ComponentHandleMessage")(msg);
+//	}
+//
+//	void Update()
+//	{
+//		this->get_override("Update")();
+//	}
+//
+//	void Startup()
+//	{
+//		this->get_override("Startup")();
+//	}
+//
+//	void Shutdown()
+//	{
+//		this->get_override("Shutdown")();
+//	}
+//
+//
+//};
+//
+//BOOST_PYTHON_MODULE(MessageMangers)
+//{
+//	enum_<MessageType>("MessageType")
+//			.value("componentEmpty"				,MessageType::componentEmpty)
+//			.value("componentStartup"			,MessageType::componentStartup)
+//			.value("componentShutdown"			,MessageType::componentShutdown)
+//			.value("componentUpdate"			,MessageType::componentUpdate)
+//			.value("objectPosChanged"			,MessageType::objectPosChanged)
+//			.value("componentAgregator"			,MessageType::componentAgregator)
+//			.value("componentExterior"			,MessageType::componentExterior)
+//			.value("cameraNewTarget"			,MessageType::cameraNewTarget)
+//			.value("controllerKeyPressed"		,MessageType::controllerKeyPressed)
+//			.value("controllerKeyReleased"		,MessageType::controllerKeyReleased)
+//			.value("controllerMouseMoved"		,MessageType::controllerMouseMoved)
+//			.value("controllerMousePressed"		,MessageType::controllerMousePressed)
+//			.value("controllerMouseReleased"	,MessageType::controllerMouseReleased)
+//			.value("physicsBoom"				,MessageType::physicsBoom)
+//			.value("rendererBoundingBoxToggle"	,MessageType::rendererBoundingBoxToggle )
+//			.value("genericMsg"					,MessageType::genericMsg);
+//
+//	class_<Messages>("Messages",init<MessageType>())
+//				.def("getMessageType",&Messages::getMessageType);
+//
+//	class_<newTargetMsg,bases<Messages>>("newTargetMsg",init<std::string>());
+//
+////	def("createNewTargetMessage",
+////			((*)(std::string))([](std::string val)->bool{return true;}));
+//}
+//
+//BOOST_PYTHON_MODULE(GameManagers)
+//{
+//
+//	enum_<componentType>("componentType")
+//			.value("EntityComponentType",EntityComponentType)
+//			.value("DefaultComponentType",DefaultComponentType)
+//			.value("RendererComponentType",RendererComponentType)
+//			.value("ControllerComponentType",ControllerComponentType)
+//			.value("PhysicsComponentType",PhysicsComponentType)
+//			.value("AnimationStateComponentType",AnimationStateComponentType)
+//			.value("CameraComponentType",CameraComponentType);
+//
+//	class_<std::vector<std::string> >("Vector")
+//	        .def(vector_indexing_suite<std::vector<std::string> >() );
+//
+//	class_<std::vector<BaseComponent*> >("VectorComponents")
+//		        .def(vector_indexing_suite<std::vector<BaseComponent*> >() );
+//
+//	class_<instanceManager>("instanceManager")
+//			.def("entityCount",&instanceManager::getEntityCount)
+//			.def("entityList",&instanceManager::getEntityList);
+//
+//	class_<writer>("logWriter")
+//				.def("write",&writer::write).staticmethod("write");
+//
+//	class_<BaseComponentWrap,BaseComponent*, boost::noncopyable>("BaseComponent",no_init)
+//			.def("ComponentName",static_cast<std::string(BaseComponent::*)() const>(&BaseComponent::ComponentName),
+//					&BaseComponentWrap::default_ComponentName)
+//			.def("HandleMessage",&BaseComponent::HandleMessage)
+//			.def("ComponentType",static_cast<componentType(BaseComponent::*)() const>(&BaseComponent::ComponentType))
+//			.def("ComponentHandleMessage",pure_virtual(&BaseComponentWrap::ComponentHandleMessage))
+//			.def("Update",pure_virtual(&BaseComponentWrap::Update))
+//			.def("Startup",pure_virtual(&BaseComponentWrap::Startup))
+//			.def("Shutdown",pure_virtual(&BaseComponentWrap::Shutdown));
+//
+//	class_<LinkManager>("LinkManager",no_init)
+//			.def("returnNumberOfLinks",&LinkManager::returnNumberOfLinks)
+//			.def("sendMsgTo",&LinkManager::sendMsgTo)
+//			.def("sendMsg",&LinkManager::sendMsg)
+//			.def("sendBroadcast",&LinkManager::sendBroadcast)
+//			.def("createLink",&LinkManager::createLink);
+//
+//	def("getLinkManager",&LinkManager::getSingleton,return_value_policy<reference_existing_object>());
+//
+//}
+
+//BOOST_PYTHON_FUNCTION_OVERLOADS()
+
+
+//	switch(incomingMsg->getMessageType())
+//	{
+//		case	MessageType::systemScriptExecuteLine:
+//		{
+//			auto msg = std::dynamic_pointer_cast<scriptExecuteLine>(incomingMsg);
+//			if(msg)
+//				outChannel.addMsg(
+//						std::shared_ptr<Messages>(
+//								new stringDataMsg(
+//											mPythonInterperter->executeLine(msg->getData())
+//											)
+//										)
+//						);
+//			break;
+//		}
+//		case	MessageType::systemScriptExecuteFile:
+//		{
+//			auto msg = static_cast<scriptExecuteFile*>(incomingMsg.get());
+//			if(msg)
+//				mPythonInterperter->executeFile(msg->getData());
+//			break;
+//		}
+//		default:
+//		{
+//			break;
+//		}
+//	}

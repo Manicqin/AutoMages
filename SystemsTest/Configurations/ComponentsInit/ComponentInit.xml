@@ -1,0 +1,5 @@
+<Test></Test>
+<ComponentsSystem WaitOnSceneBuild="1" WaitOnEntityBuild="1" WaitOnComponentBuild="1" >
+	<SystemBase ReadMsgAmount="10" SystemPriority="0" />
+</ComponentsSystem>
+

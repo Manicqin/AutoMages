@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="TaharezLook/FrameWindow" Name="ConsoleRoot" >
+        <Property Name="Text" Value="Console" />
+        
+        <Property Name="RollUpEnabled" Value="False" />
+        <Property Name="SizingEnabled" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.00234375,0},{0.005997,0},{0,851},{0,659}}" />
+        <Property Name="DragMovingEnabled" Value="False" />
+        <Window Type="TaharezLook/Listbox" Name="ChatBox" >
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0,812},{0,598}}" />
+        </Window>
+        <Window Type="TaharezLook/Editbox" Name="EditBox" >
+            <Property Name="MaxTextLength" Value="1073741823" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,600},{0,812},{0,625}}" />
+            <Property Name="TextParsingEnabled" Value="False" />
+        </Window>
+    </Window>
+</GUILayout>
